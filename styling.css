@@ -1,3 +1,10 @@
+/* LEGGE TIL FLERE STYLING-FILER KANSKJE??
+	-en egen til grid, eller flere?
+	-noen sider trenger kanskje egne, eller kan det inkluderes i html?
+	-annet?
+*/
+
+
 /*ADD COLORS++++*/
 
 html {
@@ -5,16 +12,17 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-
-	color: #00000;
-  background-color: #F1D09D;
+    color: #00000;
+    background-color: #F1D09D;
 }
 
-body{
-  	margin: 0;
-  	font-family: "Roboto", Helvetica, sans-serif;
 
-    font-size: 18px;
+body{
+	margin: auto;
+	font-family: "Roboto", Helvetica, sans-serif;
+	font-size: 18px;
+	max-width: 700px;
+	/*color:*/
 }
 
 
@@ -24,27 +32,74 @@ p{
 
 
 
-/*headers*/
+/*TITLES*/
+
 /*EDIT AND WRITE WHERE THEY ARE USED*/
-h1,h2,h3,h4 {
+h1,h3,h4,h5 {
   	font-family: "Montserrat", Helvetica, sans-serif;
   }
 
 h1 {
-    font-size: 50px;
-    font-weight: 300;
+    font-weight: 900;
+    font-size: 2.7em;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #523427;
 }
 
-h2 {
-    font-size: 
- }
-
 h3 {
-    font-size: 
- }
+    font-size: 1.2em;
+    font-weight: 800;
+    color: #F1D09D;
+    padding-left: 15px;
+    margin: 45px 0px 5px 0px;
+}
+
 h4 {
-    font-size: 
- }
+    font-size: 1.0em;
+    font-weight: 800;
+    text-align: center;
+    color: #9F3B00;
+    margin: 35px 0px -15px 0px;
+}
+
+h5 {
+    font-size: 0.81em;
+    font-weight: 500;
+    text-align: center;
+    color: #523427;
+    margin: 0px 0px 0px 0px;
+}
 
 
-/*legg til for small screens*/
+
+
+/* MENU!!*/
+
+
+
+/*IMAGES*/
+img {
+    display: block;
+    margin: auto;
+}
+
+
+/*LINKS ETC*/
+	/*example:
+	#link {
+  	height: 75%;
+  	transition: 0.4s;
+	} */
+
+
+/*footer*/
+footer {
+    margin: 50px 0px 15px 0px;
+}
+
+/*legg til for small screens: When the screen gets smaller than 1000px */
+	/*@media only screen and (max-width: 810px) {
+	....}
+*/
+
