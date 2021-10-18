@@ -1,1 +1,46 @@
 
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Sign up form </title>
+</head>
+<body>
+    <div id="courseformContainer">
+        <div class="form-title">Sign up for a course</div>
+        <form id="courseform">
+            <div class="userdetails">
+                <span class="formdetails"> Name: </span>
+                <input type="text" name="name" id="name" required />
+            </div>
+
+            <div class="userdetails">
+                <span class="formdetails"> Email: </span>
+                <input type="text" name="email" id="email" required />
+            </div>
+            <div class="userdetails">
+                <span class="formdetails"> Course: </span>
+                <select name="courseType" id="courseType">
+                    <option value="intensive"> Intensive </option>
+                    <option value="regular"> Regular </option>
+                </select>
+            </div>
+            <div class="userdetails">
+                <span class="formdetails"> Month: </span>
+                <select name="date" id="date">
+                    <option value="september"> September </option>
+                    <option value="oktober"> Oktober </option>
+                    <option value="november"> November </option>
+                    <option value="desember"> Desember </option>
+                </select>
+            </div>
+            <div class="courseButtonContainer">
+                <button type="submit" id="courseButton"> Submit </button>
+            </div>
+           
+        </form>
+    </div>
+  
+
+</body>
+</html>
