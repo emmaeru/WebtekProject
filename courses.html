@@ -1,19 +1,81 @@
 
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title> Sign up form </title>
+    <title> Idiomas por Idiotas </title>
+    <style>
+        body {
+            background: #F1D09D;
+        }
+
+        div {
+            border-radius: 20px;
+        }
+
+        .courseTypes {
+            background: #417A9A;
+            color: white;
+        }
+
+        #courseformContainer {
+            background: #D5754D;
+        }
+
+        form {
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
+    <h1>Join our physical couses!</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus fermentum libero et aliquam sollicitudin. Nulla
+        id lorem eget nunc viverra facilisis. Cras fringilla faucibus
+        eros at tristique. Morbi vestibulum lacus.
+    </p>
+    <h2>Where?</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Cras non velit id enim cursus posuere. Aliquam malesuada, sapien.
+    </p>
+
+    <h2>Where?</h2>
+
+    <div class="courseTypes">
+        <h3>Regular course 3 weeks</h3>
+        <p> En tekst om hvem det passer for og tidspunktene. </p>
+        <ul>
+            <li>October</li>
+            <li>November</li>
+            <li>December</li>
+            <li>Januar</li>
+        </ul>
+        <p>PRICE: 100 euro</p>
+    </div>
+
+    <div class="courseTypes">
+        <h3>Intensive course 4 days</h3>
+        <p> En tekst om hvem det passer for og tidspunktene.</p>
+        <ul>
+            <li>10.-13. October</li>
+            <li>10.-13. November</li>
+            <li>10.-13. December</li>
+            <li>10.-13. Januar</li>
+        </ul>
+        <p>PRICE: 100 euro</p>
+    </div>
+
+
+
     <div id="courseformContainer">
-        <div class="form-title">Sign up for a course</div>
-        <form id="courseform">
+        <form action="signUpComplete.html" id="courseform">
+            <h3 class="form-title">Sign up for a course</h3>
             <div class="userdetails">
                 <span class="formdetails"> Name: </span>
                 <input type="text" name="name" id="name" required />
             </div>
-
             <div class="userdetails">
                 <span class="formdetails"> Email: </span>
                 <input type="text" name="email" id="email" required />
@@ -37,10 +99,8 @@
             <div class="courseButtonContainer">
                 <button type="submit" id="courseButton"> Submit </button>
             </div>
-           
         </form>
     </div>
-  
 
 </body>
 </html>
