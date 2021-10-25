@@ -1,17 +1,16 @@
 <!--
 
 Game instructions: textbox in speech bubble.
-    close/open on button with ?
+    open on hover over "?"
     
 click and reveal concept: ten clickable objects
     hover: increase in size and visibility when hovered
     click: flashcard shows
-            other ones hide ???? not as on illustration picture from P2
-    click somewhere outside while shown: hide card (????????)
+    click somewhere outside while shown: hide card
 
 when 10 found: 
-    message: arena completed? or something else?
-    After having practiced, possibility to click the 'Test my skills' button. NOT ALWAYS??
+    message:hurray!
+
 -->
 
 
@@ -24,6 +23,14 @@ when 10 found:
             background: #F1D09D;
         }
         
+        .flashcard {
+            width: 100px;
+            background-color: #ffffff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 2px;
+        }
+
         img.zoom:hover,
         img.zoom:focus {
             transition: transform .2s;
@@ -32,18 +39,35 @@ when 10 found:
                 transform: scale(1.2); 
         }
         
-        /* INFO
-        (copied from web: https://codepen.io/josuao/pen/mqmJbe) */
-        .bubble-text{
-            background: #ffffff; padding:7px 15px; border-radius:8px; width:100px;}
+        .information {
+            position: relative;
+            display: inline-block;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
 
-        .bubble-text::after{
-            content:""; 
-            border-left:20px solid transparent;
-            border-right:20px solid transparent;
-            border-top: 20px solid #ffffff;
-            position: absolute;
-            }
+        .information .informationText {
+            visibility: hidden;
+            width: 120px;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: left;
+            border-radius: 6px;
+            padding: 5px;
+            
+            position: absolute;         /* Position info text */
+            z-index: 1;
+            top: -10px;
+            left: 110%;
+        }
+
+        .information:hover .informationText {
+            visibility: visible;
+        }
 
     </style>
 </head>
@@ -62,36 +86,46 @@ when 10 found:
 <br>
 
 
-<!--ADD OBJECTS
-    link to png files
-    positioning
-    hover, click osv.-->
+<!--OBJECTS
+    (Fix positioning and size!!. and "onclick!!")-->
+<div class = "marketObject">
+    <img class="zoom" src="/images/marketObject1.png">
+    <img class="zoom" src="/images/marketObject2.png">
+    <img class="zoom" src="/images/marketObject3.png">
+    <img class="zoom" src="/images/marketObject4.png">
+    <img class="zoom" src="/images/marketObject5.png">
+    <img class="zoom" src="/images/marketObject6.png">
+    <img class="zoom" src="/images/marketObject7.png">
+    <img class="zoom" src="/images/marketObject8.png">
+    <img class="zoom" src="/images/marketObject9.png">
+    <img class="zoom" src="/images/marketObject10.png">
+</div>
 
 
 <!--FLASHCARDS!!!!!!!!!!!!!!!!!!!-->
+<!--JavaScript-->
+
+    <!--CONTENT FLASHCARDS:-->
+        <div class = "flashcard">
+            <h4>SPANISH </h4>
+            <p>*)) _ english </p>
+        </div> 
 
 
-<!--when 10 found: message: arena completed? or something else? HARD TO MAKE(?), RE-USE MAYBE??-->
+
+
+<!--COUNTER 2 of 10 found..
+    when 10 found: Wihuu! Bravo. take test. ??  -->
 
 <br>
 
 
-<!--FIX THIS!!!!!!!!!!!!!!!-->
+
 <!--INFO BUTTON--> 
 
-
-<div class="bubble">
-    <div class="bubble-text">
-    <p> Select a clickable object to reveal the foreign expression </p>
+<div class="information"> ?
+    <span class="informationText">Select a clickable object to reveal the foreign expression</span>
   </div>
-  </div>
-
-<!--BETTER WITH HOVER?
-https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_right-->
-
-<div class="popUp" onclick="popFunction()"> <button id="questions" class="popUp"> ? </button> <!--STYLE AND RESIZE-->
-</div>
-
 
 <br>
 <br>
@@ -99,8 +133,22 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip_right-->
 
 <!--GO TO THE TEST-->
 <a href='/test/testMarket.html'> 
-<button id="toTestButton"> Test my skills ----->  </button> <!--ADD ARROW AND STYLE TO BUTTON-->
+<button id="toTestButton"> Test my skills ----->  </button> <!--ADD ARROW AND STYLE TO BUTTON. make it unclickable before game finished and clickable after-->
 </a>
+
+
+
+
+
+
+
+<!--IF SCREEN SMALL
+    become list of words
+--> 
+
+
+
+
 
 </body>
 </html>
