@@ -1,1 +1,97 @@
+<!DOCTYPE html>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Contact form </title>
+</head>
+<body>
+
+    <h1 style="color: #934218; text-align: center;">ABOUT US</h1>
+        <img src="img/illustrasjon 2.png" alt="Group of people" class="center" style="  display: block; margin-left: auto; margin-right: auto; width: 40%;">
+        <p style="font-size: 16px; text-align: center; padding: 0% 20%;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat repellendus quia cum, veritatis, natus temporibus explicabo officia commodi amet culpa optio, ea eligendi incidunt est rem. Libero nihil quidem blanditiis?</p>
+    
+    <h1 style="color: #934218; text-align: center;">IDIOMAS POR IDIOTAS</h1>
+        <p style="font-size: 16px; text-align: center; padding: 0% 20% ;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat repellendus quia cum, veritatis, natus temporibus explicabo officia commodi amet culpa optio, ea eligendi incidunt est rem. Libero nihil quidem blanditiis?</p> <br> <br>
+
+
+
+
+    <div style="background-color: #D87E55; color:white; font-size: small;  height: 400px; padding: 5% 20%;" >       
+        
+        <div  id="contactinfo" style="width:50%; max-width: 40%; float:left; "> <!--Left colomn --> 
+            <h1 style="font-size: 30px">CONTACT US</h1>
+            <p>Do you wish to learn more about Idiomas por Idiotas, meet us or have a closer look?</p> 
+            <p>Contact us, we will set up a meeting!</p> <br>
+            <p><img src="img/whitemail.png" style="height: 12px;">   mail@outlook.com</p>
+            <p><img src="img/phone.png" style="height: 14px;">   +47 123 45 678</p>
+            <p><img src="img/adress.png" style="height: 14px;">   Adresse 123, 4567 Barcelona</p>
+            <p><img src="img/postboks.png" style="height: 14px;">   Postboks 1234 Barcelona 5678 Spania</p>
+        </div>
+        
+        
+        
+        <div id="contactformcontainer" > <!--Right colomn --> 
+        <form id="contactform" style="padding-top: 5%;" >        
+            <span class="contactdetails">
+                <input type="text" placeholder="  NAME" name="name" class="forminput" required />
+            </span>
+            <span class="contactdetails">
+                <input type="text" placeholder="  EMAIL" name="email" class="forminput" required />
+            </span> 
+            <p></p>
+            <div class="contactdetails">
+                <textarea id="Message" placeholder="  MESSAGE" name="Message" rows="10" cols="50" ></textarea>
+            </div>   
+            <br/>
+                <button type="submit" id="contactButton"> SUBMIT </button>
+        </form>
+        </div> 
+
+
+<style>
+    body{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: #EDD1A3;
+    }
+    #contactformcontainer{
+        width: 50%; 
+        float: right;
+    }
+
+    input[type=text] {
+        border: 2px #934218;
+        border-radius: 6px;
+        height: 30px;
+        width: 40%;
+        background-color: #F8F3EA;
+        font-size: 10px;
+
+        
+    }
+    #Message{
+        border: 2px #934218;
+        border-radius: 6px;
+        height: 150px;
+        width: 81%;
+        background-color: #F8F3EA;
+        font-size: 10px;
+        font-family: Roboto, sans-serif;
+
+
+    }
+    #contactButton{
+        max-width: 500px;
+        width: 81%;
+        height: 40px;
+        border-radius: 30px;
+        border: #D87E55;
+        background-color: #FCEEE3;
+        color: #D87E55;
+        font-weight: bold;
+        font-size: 19px;
+        box-shadow: 6px 4px  #E8BC99;
+    }
+</style>
+</body>
+</html>
