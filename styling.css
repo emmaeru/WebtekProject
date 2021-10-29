@@ -12,7 +12,7 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-    color: #00000;
+    /*color: #00000;*/
     background-color: #F1D09D;
 }
 
@@ -102,4 +102,69 @@ footer {
 	/*@media only screen and (max-width: 810px) {
 	....}
 */
+
+
+
+
+
+
+
+
+/*CSS for testHome.html*/
+
+.arenaActive {                          /*Styling for de to aktive boksene.*/
+    position: absolute;
+    width: 1002px;
+    height: 184px;
+    left: 219px;
+    top: 253px;
+
+    /* Lys blå */
+    background: #E3F1F4;
+    border-radius: 20px;                 
+}
+
+.buttonActive{
+    position: absolute;
+    width: 128px;
+    height: 61px;
+    left: 1033px;
+    top: 539px;
+
+    /* grønn */
+
+    background: #799466;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.arenaInactive {                        /*Styling for de to ikke aktive boksene.*/
+    position: absolute;
+    width: 1002px;
+    height: 184px;
+    left: 219px;
+    top: 675px;
+
+    background: #FFEDE0;
+    border-radius: 20px;
+}
+
+.buttonInactive{
+    position: absolute;
+    width: 205px;
+    height: 88px;
+    left: 986px;
+    top: 729px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    /* or 160% */
+    text-align: center;
+    /* havblå */
+    color: #417A9A;
+}
+
 
