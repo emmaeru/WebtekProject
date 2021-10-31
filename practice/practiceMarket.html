@@ -1,5 +1,15 @@
-<!--
+<!--TO DO:
+    -plassere alle objektene på riktig plass og riktig str. hvordan???  
+    -layout
+    -flytte JS til riktig fil
+        -apply JS on all objects/cards
+        -CLOSE flashcard doesn't work:(((((((( FIX!!
+    -COUNTER???
+    -more?
 
+-->
+
+<!--
 Game instructions: textbox in speech bubble.
     open on hover over "?"
     
@@ -10,7 +20,6 @@ click and reveal concept: ten clickable objects
 
 when 10 found: 
     message:hurray!
-
 -->
 
 
@@ -18,19 +27,15 @@ when 10 found:
 <head>
     <meta charset="utf-8" />
     <title> Idiomas por Idiotas Practice</title>
+    <script src="/scripts/flashcard.js"></script>  <!--include javascript for flashcards-->
+    
+    
     <style>
         body {
             background: #F1D09D;
         }
-        
-        .flashcard {
-            width: 100px;
-            background-color: #ffffff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 2px;
-        }
 
+    /*ENLARGEN IMG ON HOVER*/
         img.zoom:hover,
         img.zoom:focus {
             transition: transform .2s;
@@ -38,38 +43,62 @@ when 10 found:
                 -webkit-transform: scale(1.2);
                 transform: scale(1.2); 
         }
+    
+    /*TO TEST
+    .toTestButton{
+    }*/
+
+    /*INFORMATION WHEN HOVER ON "?"*/
+    .information {
+        position: relative;
+        display: inline-block;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        border-radius: 50%;
+        background-color: #ffffff;
+    }
+
+    .information .informationText {
+        visibility: hidden;
+        width: 120px;
+        background-color: #ffffff;
+        color: #000000;
+        text-align: left;
+        border-radius: 6px;
+        padding: 5px;
         
-        .information {
-            position: relative;
-            display: inline-block;
-            padding-top: 5px;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-bottom: 5px;
-            border-radius: 50%;
-            background-color: #ffffff;
-        }
+        position: absolute;/* Position info text */
+        z-index: 1;
+        top: -10px;
+        left: 110%;
+    }
 
-        .information .informationText {
-            visibility: hidden;
-            width: 120px;
-            background-color: #ffffff;
-            color: #000000;
-            text-align: left;
-            border-radius: 6px;
-            padding: 5px;
-            
-            position: absolute;         /* Position info text */
-            z-index: 1;
-            top: -10px;
-            left: 110%;
-        }
+    .information:hover .informationText {
+        visibility: visible;
+    }
 
-        .information:hover .informationText {
-            visibility: visible;
-        }
+
+
+    /*FLASHCARDS*/
+    /* The background/box of the card. positioning */
+    .flashModal {
+        display: none; /* default: HIDE*/
+        position: fixed; top: -100; left: 100; /*position*/
+        padding-top: 200px; /* Location of the box: FIX THIS TO FOLLOW OBJECT POSITION!!!*/
+    }
+    /* flashModal "style" */
+    .flashcard {
+        width: 120px;
+        background-color: #ffffff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 2px;
+    }
 
     </style>
+
 </head>
 
 
@@ -77,13 +106,41 @@ when 10 found:
 
 <h1>AT THE MARKET</h1>
 
-<!--ADD SPANISH FLAG ICON-->
+<!--ADD SPANISH FLAG ICON (???)-->
 
 <!--illustration of arena is enlarged to cover approximately 85% of the screen-->
-<img src="/images/practiceMarket.png"> <!--STYLE AND RESIZE-->
+<img src="practiceMarket.png" style="width:100%"> <!--STYLE AND RESIZE.. and change adress to MAP!!!-->
 
-<br>
-<br>
+<!--FLASHCARDS!!!!!!!!-->
+<a id="flashObject"> <!--clickable object -->
+    <img id="imageresource" src="marketObject1.png" style="width:30%;max-width:200px" class="zoom">
+</a>
+
+<div id="flashID" class="flashModal"> <!--CONTENT FLASHCARDS:-->
+    <div class="flashcard">        
+        <h4>PERRO </h4>
+        <p>¤)) ... dog </p>
+    </div>
+</div>
+
+
+
+<!--SKAL LIGGE I JS, MEN GÅR IKKE DAAA-->
+<script>
+    var flashModal = document.getElementById("flashID");     // Get the flashcard
+    var object = document.getElementById("flashObject");
+    
+    object.onclick = function() {      // show flascard when object is clicked
+        flashModal.style.display = "block";
+    }
+
+//CLOSE doesn't work:((((((((            FIX!!
+window.addEventListener("click", function(event) {
+    if (event.target == flashModal) {
+        flashModal.style.display = "none";
+    }});
+
+    </script>
 
 
 <!--OBJECTS
@@ -102,27 +159,13 @@ when 10 found:
 </div>
 
 
-<!--FLASHCARDS!!!!!!!!!!!!!!!!!!!-->
-<!--JavaScript-->
-
-    <!--CONTENT FLASHCARDS:-->
-        <div class = "flashcard">
-            <h4>SPANISH </h4>
-            <p>*)) _ english </p>
-        </div> 
-
-
-
 
 <!--COUNTER 2 of 10 found..
     when 10 found: Wihuu! Bravo. take test. ??  -->
 
 <br>
 
-
-
 <!--INFO BUTTON--> 
-
 <div class="information"> ?
     <span class="informationText">Select a clickable object to reveal the foreign expression</span>
   </div>
@@ -130,15 +173,10 @@ when 10 found:
 <br>
 <br>
 
-
 <!--GO TO THE TEST-->
 <a href='/test/testMarket.html'> 
 <button id="toTestButton"> Test my skills ----->  </button> <!--ADD ARROW AND STYLE TO BUTTON. make it unclickable before game finished and clickable after-->
 </a>
-
-
-
-
 
 
 
