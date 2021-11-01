@@ -1,23 +1,20 @@
 <!--TO DO:
-    -plassere alle objektene på riktig plass og riktig str. hvordan???  
-    -layout
+    -plassere alle objektene på riktig plass og riktig str. hvordan??? 
     -flytte JS til riktig fil
         -apply JS on all objects/cards
         -CLOSE flashcard doesn't work:(((((((( FIX!!
-    -COUNTER???
-    -more?
-
+        -code to add more cards
+    -create COUNTER + message + edit button to test
+    -move img and other files to the right folders and change adress in code
 -->
 
 <!--
 Game instructions: textbox in speech bubble.
     open on hover over "?"
-    
 click and reveal concept: ten clickable objects
     hover: increase in size and visibility when hovered
     click: flashcard shows
     click somewhere outside while shown: hide card
-
 when 10 found: 
     message:hurray!
 -->
@@ -27,8 +24,6 @@ when 10 found:
 <head>
     <meta charset="utf-8" />
     <title> Idiomas por Idiotas Practice</title>
-    <script src="/scripts/flashcard.js"></script>  <!--include javascript for flashcards-->
-    
     
     <style>
         body {
@@ -85,7 +80,7 @@ when 10 found:
     /* The background/box of the card. positioning */
     .flashModal {
         display: none; /* default: HIDE*/
-        position: fixed; top: -100; left: 100; /*position*/
+        position: fixed; top: -100; left: 100; /*position SHOULD NOT BE FIXED, BUT LINKED TO OBJECT*/
         padding-top: 200px; /* Location of the box: FIX THIS TO FOLLOW OBJECT POSITION!!!*/
     }
     /* flashModal "style" */
@@ -106,12 +101,17 @@ when 10 found:
 
 <h1>AT THE MARKET</h1>
 
-<!--ADD SPANISH FLAG ICON (???)-->
 
 <!--illustration of arena is enlarged to cover approximately 85% of the screen-->
 <img src="practiceMarket.png" style="width:100%"> <!--STYLE AND RESIZE.. and change adress to MAP!!!-->
 
+<!--SPANISH FLAG-->
+<img src="Checkmark.png" style="width:50px"> <!--change to flag-->
+
+
 <!--FLASHCARDS!!!!!!!!-->
+
+<!--FLASHCARD: DOG-->
 <a id="flashObject"> <!--clickable object -->
     <img id="imageresource" src="marketObject1.png" style="width:30%;max-width:200px" class="zoom">
 </a>
@@ -119,28 +119,24 @@ when 10 found:
 <div id="flashID" class="flashModal"> <!--CONTENT FLASHCARDS:-->
     <div class="flashcard">        
         <h4>PERRO </h4>
-        <p>¤)) ... dog </p>
+        <img src="speakerIcon.png" style="width:30px"> 
+        <p>dog </p>
     </div>
 </div>
 
 
+<!--FLASHCARD: APPLE-->
+<a id="flashObject"> <!--clickable object -->
+    <img id="imageresource" src="marketObject2.png" style="width:30%;max-width:200px" class="zoom">
+</a>
 
-<!--SKAL LIGGE I JS, MEN GÅR IKKE DAAA-->
-<script>
-    var flashModal = document.getElementById("flashID");     // Get the flashcard
-    var object = document.getElementById("flashObject");
-    
-    object.onclick = function() {      // show flascard when object is clicked
-        flashModal.style.display = "block";
-    }
-
-//CLOSE doesn't work:((((((((            FIX!!
-window.addEventListener("click", function(event) {
-    if (event.target == flashModal) {
-        flashModal.style.display = "none";
-    }});
-
-    </script>
+<div id="flashID" class="flashModal"> <!--CONTENT FLASHCARDS:-->
+    <div class="flashcard">        
+        <h4>MANZANA </h4>
+        <img src="speakerIcon.png" style="width:30px"> 
+        <p>apple</p>
+    </div>
+</div>
 
 
 <!--OBJECTS
@@ -185,6 +181,7 @@ window.addEventListener("click", function(event) {
 --> 
 
 
+<script src="flashcard.js"></script>  <!--include javascript for flashcards MOVE FILE!!-->
 
 
 
