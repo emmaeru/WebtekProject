@@ -1,56 +1,116 @@
-/* LEGGE TIL FLERE STYLING-FILER KANSKJE??
-	-en egen til grid, eller flere?
-	-noen sider trenger kanskje egne, eller kan det inkluderes i html?
-	-annet?
-*/
 
-
-/*ADD COLORS++++*/
-
-html {
-    width: 100%;
-    height: 100%;
+/* ALL */
+html, body {
     margin: 0;
     padding: 0;
-    color: #00000;
-    background-color: #F1D09D;
+    height: 100%;
 }
 
-
-body{
-	margin: auto;
-	font-family: "Roboto", Helvetica, sans-serif;
-	font-size: 18px;
-	max-width: 700px;
-	/*color:*/
+/* COLORS */
+:root {
+    --yellow: #F1D09D;
+    --peach: #D5754D;
+    --red: #9F3B00;
+    --dark: #341E11;
+    --text: #F9F3E9;
+    --babyBlue: #E3F1F4;
+    --lightPeach: #FFEDE0;
+    --green: #799466;
+    --blue: #417A9A;
 }
 
-
-p{
-    font-size: 18px;
+/* BODY CONTAINER */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
 }
 
+/* MAIN CONTAINER */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brand-color);
+}
 
+/* CONTENT CONTAINER 1 */
+.Box1 {
+    background-color: var(--babyBlue);
+    width: 1000px;
+    height: 200px;
+    border: 0px solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
 
-/*TITLES*/
+/* CONTENT CONTAINER 2 */
+.Box2 {
+    background-color: var(--lightPeach);
+    width: 1000px;
+    height: 200px;
+    border: 0px solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
 
-/*EDIT AND WRITE WHERE THEY ARE USED*/
+/* NAVBAR */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--brand-color);
+
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+/* MENU OPTIONS */
+header ul {
+    background-color: var(--brand-color);
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    margin: 0;
+}
+
+/* HOME / LOGO BUTTON */
+.Logo {
+    margin: auto 0px auto 15px;
+    height: auto;
+    width: auto;
+    background-color: var(--brand-color);
+}
+
+/* LIST ITEMS IN NAVBAR */
+li {
+    list-style-type: none;
+    padding: 25px 60px 25px 25px;
+}
+
+/* TITLES */
 h1,h3,h4,h5 {
   	font-family: "Montserrat", Helvetica, sans-serif;
-  }
+}
 
 h1 {
     font-weight: 900;
     font-size: 2.7em;
     margin-bottom: 5px;
     text-align: center;
-    color: #523427;
+    color: var(--dark)
 }
 
 h3 {
     font-size: 1.2em;
     font-weight: 800;
-    color: #F1D09D;
+    color: var(--brand-color);
     padding-left: 15px;
     margin: 45px 0px 5px 0px;
 }
@@ -59,7 +119,7 @@ h4 {
     font-size: 1.0em;
     font-weight: 800;
     text-align: center;
-    color: #9F3B00;
+    color: var(--red);
     margin: 35px 0px -15px 0px;
 }
 
@@ -67,39 +127,41 @@ h5 {
     font-size: 0.81em;
     font-weight: 500;
     text-align: center;
-    color: #523427;
+    color: var(--dark);
     margin: 0px 0px 0px 0px;
 }
 
-
-
-
-/* MENU!!*/
-
-
-
-/*IMAGES*/
+/* IMAGES */
 img {
-    display: block;
-    margin: auto;
+    display: inline-block;
 }
 
+/* LINKS */
+a {
+    text-decoration: none;
+    color: black;
+}
 
-/*LINKS ETC*/
-	/*example:
-	#link {
-  	height: 75%;
-  	transition: 0.4s;
-	} */
+a:hover, a:active {
+    color: var(--red);
+    font-weight: 900;
+}
 
-
-/*footer*/
+/* FOOTER */
 footer {
-    margin: 50px 0px 15px 0px;
+    background-color: var(--brand-color);
+    padding: 10px;
 }
 
-/*legg til for small screens: When the screen gets smaller than 1000px */
-	/*@media only screen and (max-width: 810px) {
-	....}
-*/
-
+/* SCALING */
+@media only screen and (max-width: 600px) {
+    header ul {
+      background-color: var(--brand-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 0;
+      padding: 0;
+    }
+}
