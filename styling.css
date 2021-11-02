@@ -4,6 +4,10 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.81em;
+    font-weight: 400;
+    background-color: var(--yellow);
 }
 
 /* COLORS */
@@ -23,10 +27,6 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-}
 
 /* MAIN CONTAINER */
 main {
@@ -35,7 +35,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--brand-color);
+    margin-bottom: 150px;
 }
 
 /* CONTENT CONTAINER 1 */
@@ -47,6 +47,7 @@ main {
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
+    margin-top: 125px;
 }
 
 /* CONTENT CONTAINER 2 */
@@ -65,7 +66,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--brand-color);
 
     font-weight: 600;
     letter-spacing: 1.2px;
@@ -73,7 +73,6 @@ header {
 
 /* MENU OPTIONS */
 header ul {
-    background-color: var(--brand-color);
     display: flex;
     flex-direction: row;
     justify-content:right;
@@ -85,7 +84,6 @@ header ul {
     margin: auto 0px auto 15px;
     height: auto;
     width: auto;
-    background-color: var(--brand-color);
 }
 
 /* LIST ITEMS IN NAVBAR */
@@ -149,14 +147,42 @@ a:hover, a:active {
 
 /* FOOTER */
 footer {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: bottom;
     background-color: var(--brand-color);
     padding: 10px;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 50px;
+}
+
+.socialMedia {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 150px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.siteLinks {
+    display: flex;
+    margin-right: 50px;
+    flex-direction: column;
+    justify-content: right;
+    text-align: right;
 }
 
 /* SCALING */
 @media only screen and (max-width: 600px) {
     header ul {
-      background-color: var(--brand-color);
       display: flex;
       flex-direction: column;
       align-items: center;
