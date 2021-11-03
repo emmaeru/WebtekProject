@@ -1,80 +1,93 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title> Contact form </title>
-</head>
-<body>
+    <head>
+		
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=page" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Idiomas Por Idiotas</title>
 
-    <h1 style="color: #7F936B; text-align: left; font-weight: bold">WELCOME!</h1>
-        <p style="font-size: 16px; width: 40%;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat repellendus quia cum, veritatis, natus temporibus explicabo officia commodi amet culpa optio, ea eligendi incidunt est rem. Libero nihil quidem blanditiis?</p>
-        <img src="img/jordklode.png" alt="Globe with flag"  style=" width: 40%;">
+    </head>
 
-    <h2 style="color: #934218; text-align: center;">START LEARNING NOW...</h1>
+	<body>
 
+		<header> <!-- NAVBAR -->
 
+			<div class="Logo"><img src="images/logo.svg" height="37"></div> <!-- LOGO -->
 
-    <div style="background-color: #D87E55; color:white; font-size: small;  height: 500px; padding: 5% 20%;" >       
+			<ul> <!-- NAVBAR OPTIONS -->
+				<li><a href="practice/practiceHome.html" id="practice">PRACTICE</a></li>
+				<li><a href="test/testHome" id="test">TEST</a></li>
+				<li><a href="courses.html" id="courses">COURSES</a></li>
+				<li><a href="about.html" id="about">ABOUT US</a></li>
+				<li>EN ▼</li>
+			</ul>
+			
+		</header>
+
+		<main> <!-- SITE CONTENT -->
+
+			<div class="homeBox1"> <!-- BOX 1 -->
+
+        		<div> <!-- TOP LEFT TEXT -->
+					<h1 id="homeWelcome">WELCOME!</h1>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+						tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis 
+						nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+				</div>
         
-        <div  id="contactinfo" style=" text-align: center;"> <!--Left colomn --> 
-            <h3 style="font-size: 10px; text-decoration: underline;">SELECT LANGUAGE</h3>
-            <img src="img/spanish.png" alt="Spanish flag"  style=" width: 40%;">
-            <h3 style="font-size: 10px; ">SPANISH</h3>
+        		<img src="img/globe.svg" id="globeImage"> <!-- ILLUSTRATION -->
 
-            <img src="img/german.png" alt="German flag"  style=" width: 40%;">
-            <h3 style="font-size: 10px; ">GERMAN</h3>
+      		</div>
 
-            <button type="submit" id="contactButton"> LETS GO </button>
+      		<h2 id="startLearning">START LEARNING NOW...</h2> <!-- HEADING ABOVE BOX -->
 
-        </div>
+			<div class="homeBox2"> <!-- BOX 2 -->
+
+        		<h3 id="selectLanguage">SELECT LANGUAGE</h3> <!-- UNDERLINED HEADING -->
+
+				<div class="flagSelection">
+					<div class="Spanish">
+						<img src="img/spanish.svg"> <!-- SPANISH FLAG -->
+						<h3>SPANISH</h3> <!-- ALIGN -->
+					</div>
+
+					<div class="German">
+						<img src="img/german.svg"> <!-- GERMAN FLAG -->
+						<h3>GERMAN</h3> <!-- ALIGN -->
+					</div>
+				</div>
+
+        		<button type="submit" id="letsGoButton">LETS GO</button> <!-- BUTTON -->
+
+			</div>
         
-        
-        
+		</main>
 
-<style>
-    body{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        background-color: #EDD1A3;
-    }
-    #contactformcontainer{
-        width: 50%; 
-        float: right;
-    }
+		<footer> <!-- FOOTER -->
 
-    input[type=text] {
-        border: 2px #934218;
-        border-radius: 6px;
-        height: 30px;
-        width: 40%;
-        background-color: #F8F3EA;
-        font-size: 10px;
+			<div class="contactInfo"> <!-- CONTACT INFO -->
+				<p>Idiomas Por Idiotas
+				<br><br>mail@outlook.com
+				<br>+47 123 45 678</p>
+			</div>
 
-        
-    }
-    #Message{
-        border: 2px #934218;
-        border-radius: 6px;
-        height: 150px;
-        width: 81%;
-        background-color: #F8F3EA;
-        font-size: 10px;
-        font-family: Roboto, sans-serif;
+			<div class="socialMedia"> <!-- SOCIAL MEDIA ICON / LINKS -->
+				<a href="http://www.facebook.com"> <img src="images/FB.svg"> </a>
+				<a href="http://www.instagram.com"> <img src="images/IG.svg"> </a>
+				<a href="mailto:mail@outlook.com"> <img src="images/mail.svg" target="_blank"> </a>
+			</div>
 
+			<div class="pageLinks"> <!-- LINK TO PAGES -->
+				<a href="http://about.html">Contact us</a>
+				<a href="http://courses.html">Join a physical course!</a>
+			</div>
+			
+		</footer>
 
-    }
-    #contactButton{
-        max-width: 500px;
-        width: 81%;
-        height: 40px;
-        border-radius: 30px;
-        border: #D87E55;
-        background-color: #FCEEE3;
-        color: #D87E55;
-        font-weight: bold;
-        font-size: 19px;
-        box-shadow: 6px 4px  #E8BC99;
-    }
-</style>
-</body>
+	</body>
+
 </html>
