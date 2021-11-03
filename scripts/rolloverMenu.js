@@ -14,3 +14,15 @@ function myFunction() {
     x.className = "menu";
   }
 }
+
+
+
+//show and hide dropdown on hover click
+function show_hide() {
+    var hover = document.getElementById("list-items");
+    if(hover.style.display ==="none") {
+      hover.style.display ="block";
+    } else {
+      hover.style.display ="none";
+    } 
+}

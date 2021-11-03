@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styling.css" />
+
 <style>
-body {margin:0;font-family:Arial;
+body {
     background-color: #f1d09d;
 }
 
@@ -16,55 +17,50 @@ body {margin:0;font-family:Arial;
 .menu a {
   float: left;
   display: block;
-  color: #9f3b00;
+  color: #341e11;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  padding: 16px;
+  font-size: 16px;
+  text-decoration: none; /*remove underline*/
+
 }
 
+/*indicate which page you're on*/
 .active {
-    color: #9f3b00;
-}
-
-.menu .icon {
-  display: none;
+color: #9f3b00;
+font-weight: bold;
 }
 
 .dropdown {
   float: left;
-  overflow: hidden;
+  overflow: hidden; /*hide normally*/
 }
 
-.dropdown .dropbtn {
-  font-size: 17px;    
+.dropdown .triggerDropdown {
+  font-size: 16px;    
   border: none;
-  outline: none;
-  color: #9f3b00;
-  padding: 14px 16px;
+  color: #341e11;
+  padding: 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #d5754d;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  min-width: 140px;
 }
 
 .dropdown-content a {
+  display: block;
   float: none;
   color: #f1d09d;
   padding: 12px 16px;
-  display: block;
   text-align: left;
 }
 
-.menu a:hover, .dropdown:hover .dropbtn {
+.menu a:hover, .dropdown:hover .triggerDropdown {
   background-color: #d5754d;
   color: #f1d09d;
 }
@@ -78,11 +74,14 @@ body {margin:0;font-family:Arial;
   display: block;
 }
 
+.menu .icon {
+  display: none;
+}
 
 
 
 @media screen and (max-width: 600px) {
-  .menu a:not(:first-child), .dropdown .dropbtn {
+  .menu a:not(:first-child), .dropdown .triggerDropdown {
     display: none;
   }
   .menu a.icon {
@@ -98,6 +97,7 @@ body {margin:0;font-family:Arial;
     right: 0;
     top: 0;
   }
+  
   .menu.responsive a {
     float: none;
     display: block;
@@ -105,12 +105,13 @@ body {margin:0;font-family:Arial;
   }
   .menu.responsive .dropdown {float: none;}
   .menu.responsive .dropdown-content {position: relative;}
-  .menu.responsive .dropdown .dropbtn {
+  .menu.responsive .dropdown .triggerDropdown {
     display: block;
     width: 100%;
     text-align: left;
   }
 }
+
 </style>
 
 
@@ -121,8 +122,7 @@ body {margin:0;font-family:Arial;
   <a href="#practice" class="active">PRACTICE</a>
 
   <div class="dropdown">
-    <button class="dropbtn">TEST 
-      <i class="fa fa-caret-down"></i>
+    <button class="triggerDropdown">TEST 
     </button>
     <div class="dropdown-content">
       <a href="/test/testMarket.html">MARKET</a>
@@ -136,11 +136,12 @@ body {margin:0;font-family:Arial;
   <a href="#about">ABOUT US</a>
 
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
 </div>
 
 
 
-<script src="rolloverMenu.js"></script> 
+<script src="/scripts/rolloverMenu.js"></script> 
 
 </body>
 </html>

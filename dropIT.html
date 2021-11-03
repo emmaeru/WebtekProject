@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+		
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=page" />
+		<link rel="stylesheet" href="style.css" />
+        <title>Idiomas Por Idiotas</title>
+
+    </head>
+
+	<body>
+
+
+
+<script>
+
+    /*
+FILE NAME: header.js
+WRITTEN BY: Hanne Brynildsrud and Magnus Ramm(modularity)
+WHEN: November 2017
+PURPOSE: Responsive navigationbar to all undersites.
+*/
+
+var navbar = document.querySelector("nav"); //Links to the id of the div where the image-slider should be put.
+var head = document.querySelector("head"); //Links to the head of the html-file.
+
+//This function essentially replaces the content of the div to be a bunch of HTML-code. This way we put the html code in multiple documents without having to copy and paste it into all the sites we want it to work on. This is further explained under the modularity section of the P3 document.
+function implementNavbar() {
+    head.innerHTML += `<link rel="stylesheet" href="style/style-header.css">`;
+    //Adds the stylesheet used to the html-page
+    navbar.innerHTML = `
+        <!-- A div is wrapped around the whole navbar, so its easier to implement it on all sites. --> 
+	      <div class="navbar" id="topnav">
+          <div class="logo">
+            <a class="logo" href="index.html">StudentHjelpen</a>
+          </div>
+          <a href="schedule.html" class="item">Timeplan</a>
+          <a href="studentpriser.html" class="item">Studentpriser</a>
+          <!-- To make the dropdown button act as all the other links on the page, an onclick function sends the user to the directed location. -->
+          <div class="dropdown">
+            <button class="dropbtn" class="item" id="button" onclick="location.href='studenthacks.html'">Studenthacks</button>
+              <div class="dropdown-content">
+                <a href="videos-podcasts.html">Lyd- og videofiler</a>
+                <a href="helpful-links.html">Nyttige linker</a>
+              </div>
+            </div>
+          <a href="recipes.html" class="item">Oppskrifter</a>
+          <a href="mazemap.html" class="item">Maze-map</a>
+          <a href="faq-contact.html" class="item">FAQ & kontakt</a>
+          <!-- Adding a span to create the hamburger icon. -->
+          <a href="#" class="icon" id="navbar-button"><span></span></a>
+        </div>
+        `;
+}
+implementNavbar();
+
+/* Turning the hamburger menu-icon into a cross by toggle the class active
+* when the icon is clicked.*/
+document.querySelector("#navbar-button").addEventListener("click", hamburger);
+
+function hamburger() {
+  this.classList.toggle("active");
+}
+
+
+document.getElementById("navbar-button").addEventListener("click", responsiveNav);
+/* Making the navigation bar responsive, by adding and removing
+* the "responsive" class to the elements with classname navbar
+* when the user clicks the menu icon.*/
+function responsiveNav() {
+  document.getElementById("button").style.display="flex";
+  let navigationWrap = document.getElementById("topnav");
+  if (navigationWrap.className == "navbar") { // Adds the class responsive to navbar.
+    navigationWrap.className += " responsive";
+  }
+  else {
+    navigationWrap.className = "navbar";
+    document.getElementById("button").style.display="none";
+  }
+}
+/* Makes sure the button Studenthacks stays hidden when viewport decreases,
+ * and shows it when the navigationbar is added the class responsive. */
+if (matchMedia) {
+  const mq = window.matchMedia("(min-width: 768px)");
+  // Assigning the const mq to when viewport is at least 768 pixels wide
+  mq.addListener(toggleButton); // When viewport is at least 768 pixels wide, the function toggleButton runs.
+  toggleButton(mq);
+}
+
+/* Making a function for removing and adding the dropdownbutton when
+ * the screensize decreases and increases. */
+function toggleButton(mq) {
+  if (mq.matches) {
+    /* When viewport increases over 750px wide, the classname responsive is removed from all
+    * elements inside the div around the navbar. */
+    document.getElementById("topnav").classList.remove("responsive");
+    // Then the style should also change to display flex.
+    document.getElementById("button").style.display = "flex";
+  }
+  /* If the viewport is smaller than 750px wide, the button shall not be displayed, unless
+  * the class is assigned the class responsive.*/
+  else {
+    document.getElementById("button").style.display = "none";
+  }
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<!--
+FILE NAME: index.html
+WRITTEN BY: Magnus Ramm
+WHEN: October 2017
+PURPOSE: Provides a hub where you start off your journey on the webpage. Contains a navigation bar that sticks upon scrolling down, so it's always visible on the page. The page also contains an about-section and an image-slider, which is implemented by the "scripts/slider.js".
+-->
+
+
+
+
+<body class="indexSpecific">
+	<div class="ontop">     
+    </div>
+		<nav class="indexSpecific"></nav> <!-- This nav-element is where the navbar is implemented -->
+	</div>
+
