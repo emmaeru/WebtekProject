@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin:0;font-family:Arial;
+    background-color: #f1d09d;
+}
+
+.menu {
+  overflow: hidden;
+  background-color: #f1d09d;
+}
+
+.menu a {
+  float: left;
+  display: block;
+  color: #9f3b00;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+    color: #9f3b00;
+}
+
+.menu .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: #9f3b00;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #d5754d;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #f1d09d;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.menu a:hover, .dropdown:hover .dropbtn {
+  background-color: #d5754d;
+  color: #f1d09d;
+}
+
+.dropdown-content a:hover {
+  background-color: #9f3b00;
+  color: #f1d09d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .menu a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .menu a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu.responsive {position: relative;}
+  .menu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .menu.responsive .dropdown {float: none;}
+  .menu.responsive .dropdown-content {position: relative;}
+  .menu.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+
+
+</head>
+<body>
+
+<div class="menu" id="navbar">
+  <a href="#practice" class="active">PRACTICE</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">TEST 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/test/testMarket.html">MARKET</a>
+      <a href="#">KITCHEN</a>
+      <a href="#">BAR</a>
+      <a href="#">SCHOOL</a>
+    </div>
+  </div> 
+
+  <a href="#contact">COURSES</a>
+  <a href="#about">ABOUT US</a>
+
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+
+<script src="rolloverMenu.js"></script> 
+
+</body>
+</html>
