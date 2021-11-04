@@ -29,45 +29,48 @@
 
 		<main> <!-- SITE CONTENT -->
 
-			<div class="homeBox1">
+			<div class="coursesTop">
 
-                <div class="homeText">
-                    <h1>JOIN OUR PHYSICAL COURSES!</h1>
+                <div class="coursesText">
+                    <h1 style="text-align: left;">JOIN OUR PHYSICAL COURSES!</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
                         tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
                         tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. 
                     </p>
-                    <h2>WHERE?</h2>
+                    <h2 style="text-align: left; font-size: 50px; margin: 60px 0px 5px 0px;">WHERE?</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
                         diam nonummy nibh euismod tincidunt ut laoreet dolore nisl.
                     </p>
+
+                    <h2 style="text-align: left; font-size: 50px; margin: 60px 0px 5px 0px;">WHEN?</h2>
+
                 </div>
 
-                <div id="courseformContainer">
+                <div id="SignUpCourse">
 
-                    <form action="signUpComplete.html" id="courseform">
-                        <h3 class="form-title">SIGN UP FOR A COURSE</h3>
+                    <form action="SignUpComplete.html" id="courseform">
+                        <h3 class="form-title" style="font-size: 30px;">SIGN UP FOR<br>A COURSE</h3>
                         <div class="userdetails">
-                            <span class="formdetails">NAME</span>
-                            <input type="text" name="name" id="name" required />
+                            <span class="formDetails" id="peronaliaTag">NAME</span>
+                            <input type="text" name="name" id="personalia" required />
                         </div>
                         <div class="userdetails">
-                            <span class="formdetails">EMAIL</span>
-                            <input type="text" name="email" id="email" required />
+                            <span class="formDetails" style="margin-left: 15px; color: var(--text); letter-spacing: 0.1em; color: var(--text);">EMAIL</span>
+                            <input type="text" name="email" id="personalia"required />
                         </div>
                         <div class="userdetails">
-                            <span class="formdetails">COURSE</span>
-                            <select name="courseType" id="courseType">
+                            <span class="formDetails" id="peronaliaTag">COURSE</span>
+                            <select name="selectType" id="personalia">
                                 <option value="intensive">Intensive</option>
                                 <option value="regular">Regular</option>
                             </select>
                         </div>
                         <div class="userdetails">
-                            <span class="formdetails">MONTH</span>
-                            <select name="date" id="date">
+                            <span class="formDetails" id="peronaliaTag">MONTH</span>
+                            <select name="selectType" id="personalia">
                                 <option value="september"> September </option>
                                 <option value="oktober"> Oktober </option>
                                 <option value="november"> November </option>
@@ -75,40 +78,44 @@
                             </select>
                         </div>
                         <div class="courseButtonContainer">
-                            <button type="submit" id="submitButton">SUBMIT</button>
+                            <button type="submit" id="roundButton">SUBMIT</button>
                         </div>
                     </form>
                 </div>
 
-                <h2>WHEN?</h2>
+            </div>
+
+            <div class="courseType">
+
+                <div id="courseDescription">
+                    <h3 style="text-align: left;">REGULAR COURSE 3 WEEKS</h3>
+                    <p style="letter-spacing: 0.05em;"> En tekst om hvem det passer for og tidspunktene. </p>
+                </div>
+
+                <p style="font-weight: 900;">
+                &bullet; October<br>
+                &bullet; November<br>
+                &bullet; December<br>
+                &bullet; Januar</p>
+
+                <h4>PRICE:<br>200 ¢</h4>
 
             </div>
 
-            <div class="homeBox2">
+            <div class="courseType">
 
-                <div class="courseTypes">
-                    <h3>REGULAR COURSE 3 WEEKS</h3>
-                    <p> En tekst om hvem det passer for og tidspunktene. </p>
-                    <ul>
-                        <li>October</li>
-                        <li>November</li>
-                        <li>December</li>
-                        <li>Januar</li>
-                    </ul>
-                    <p>PRICE: 100 ¢</p>
+                <div id="courseDescription">
+                    <h3 style="text-align: left;">INTENSIVE COURSE 4 DAYS</h3>
+                    <p style="letter-spacing: 0.05em;"> En tekst om hvem det passer for og tidspunktene.</p>
                 </div>
 
-                <div class="courseTypes">
-                    <h3>INTENSIVE COURSE 4 DAYS</h3>
-                    <p> En tekst om hvem det passer for og tidspunktene.</p>
-                    <ul>
-                        <li>10.-13. October</li>
-                        <li>10.-13. November</li>
-                        <li>10.-13. December</li>
-                        <li>10.-13. Januar</li>
-                    </ul>
-                    <p>PRICE: 100 ¢</p>
-                </div>
+                <p style="font-weight: 900;">
+                &bullet; 10.-13. October<br>
+                &bullet; 10.-13. November<br>
+                &bullet; 10.-13. December<br>
+                &bullet; 10.-13. Januar</p>
+
+                <h4>PRICE:<br>100 ¢</h4>
 
             </div>
 
@@ -123,8 +130,8 @@
 			</div>
 
 			<div class="socialMedia"> <!-- SOCIAL MEDIA ICON / LINKS -->
-				<a href="http://www.facebook.com"> <img src="images/FB.svg"> </a>
-				<a href="http://www.instagram.com"> <img src="images/IG.svg"> </a>
+				<a href="http://www.facebook.com"> <img src="images/faceBook.svg"> </a>
+				<a href="http://www.instagram.com"> <img src="images/instaGram.svg"> </a>
 				<a href="mailto:mail@outlook.com"> <img src="images/mail.svg" target="_blank"> </a>
 			</div>
 
