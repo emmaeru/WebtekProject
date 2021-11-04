@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testMarket</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #previous{
+            width: 150px;
+        }
+        #current{
+            width: 250px;
+        }
+        #next{
+            width: 150px;
+        }
+        .liste {
+            display: inline-block;
+        }
+        body{
+            background:#F1D09D
+        }
+        .circle{
+            width:20px; 
+        }
+        li {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Market</h1>
+    <img src="images/SpanishFlag.png" alt="Spanish flag icon" id="flag" width= 10%>
+    <br><br>
+
+    <h2 id="finalScore" style="display:none;" class="afterTest"></h2>
+    <h3 id="scoreMessage" style="display:none;" class="afterTest"></h3>
+    <div id="circle-bar">
+        <ul id="circle-list" style="list-style:none; ">
+            <li> <img src="images/blueCircle.png" class="circle" id="circle1" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle2" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle3" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle4" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle5" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle6" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle7" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle8" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle9" /> </li>
+            <li> <img src="images/whiteCircle.png" class="circle" id="circle10" /> </li>
+        </ul>
+    </div>
+
+
+    <!--<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1600097347472/FaJTB7UrN.jpeg" id="eeveelutions" />
+    <canvas id="canvas" width="200" height="200"> </canvas>-->
+    
+    <!--<canvas id="previousC" width="150" height="200" style="border:3px
+            dotted" >
+            Fallback content (eg. your browser does not support canvas)
+    </canvas>
+    <canvas id="currentC" width="200" height="250" style="border:3px
+            dotted" >
+            Fallback content (eg. your browser does not support canvas)
+    </canvas>
+    <canvas id="nextC" width="150" height="200" style="border:3px
+    dotte" >
+        Fallback content (eg. your browser does not support canvas)
+    </canvas>-->
+
+
+    <div id="carousel">
+        <ul id="carouselList" style="list-style: none;">
+            <li class="liste"><img src="images/iconEgg.png" class="carouselImage" id="previous" style= "visibility: hidden;" /> </li>
+            <li class="liste"><img src="images/iconEgg.png" class="carouselImage" id="current" /> </li>
+            <li class="liste"><img src="images/iconBanana.png" class="carouselImage" id="next" /> </li>
+        </ul>
+    </div>
+
+
+
+    <!--Inputfieldet for å avgi svar, laget i en form.-->
+    <div id="markedAnswer">
+        <form>
+            <label for="marketInput"></label>
+            <input type="text" id="marketInput" name="marketInput">
+            <!--Sjekker ordet mot fasiten, kan kun sjekke en gang per ord-->
+            <input type="submit" name="checkButton" id="checkButton" value="CHECK" class="duringTest" />
+        </form>
+    </div>
+
+    <br>
+     <!-- Går til neste ord, skifter bilde-->
+     <button id="nextButton" class="duringTest" class="buttonNext"> NEXT -> </button>
+
+    <h3 id="feedbackMessage" style="visibility:hidden"></h3>
+
+    <!-- Får siden til å refreshe-->
+    <button id="repeatButton" class="duringTest" style="display:none;" onClick="history.go(0)" > REPEAT TEST </button>
+
+    <!-- Linker til testHome.html-->
+    <button id="moretestsButton" class="duringTest" style="display:none;"  onclick="location.href = 'testHome.html';"> MORE TESTS </button>
+
+
+    <!--Legger til scripts.-->
+    <script src="scripts/testPointsAndInput.js"></script>
+    <script src="scripts/imageCarouselMarket.js"></script>
+    
+
+</body>
+</html>
