@@ -27,7 +27,6 @@
 			</ul>
 			
 		</header>
-
 		<main> <!-- SITE CONTENT -->
 
 			<div class="aboutTop">
@@ -81,22 +80,22 @@
 
                 <div class="contactFormBox">
 
-                    <form id="contactForm">
+                    <form action="messageSent.html" id="contactForm">
                         <span>
                             <input type="text" placeholder="Name"  id="contactDetails" class="formInput" required />
                         </span>
 
                         <span>
-                            <input type="text" placeholder="Email"  id="contactDetails" class="formInput" required />
+                            <input type="email" placeholder="Email" id="contactDetails" class="formInput" required /> <!--pattern=".+@" title="must contain @"--> 
+
                         </span>
 
                         <div>
-                            <textarea placeholder="Message"  id="contactDetails" rows="9" cols="46" style="font-family: 'Roboto', sans-serif;"></textarea>
+                            <textarea placeholder="Message"  id="contactDetails" rows="9" cols="46" style="font-family: 'Roboto', sans-serif;" required></textarea>
                         </div>
 
                         <button type="submit" id="roundButton" style="width: 330px;">SUBMIT</button>
                     </form>
-                    
                 </div>
 
 			</div>
