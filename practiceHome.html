@@ -1,12 +1,5 @@
-<!--first part copied from courses.html <3
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title> Idiomas por Idiotas Practice </title>
+<!--
     <style>
-        body {
-            background: #F1D09D;
-        }
 
         img.zoom:hover,
         img.zoom:focus {
@@ -28,8 +21,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Select arena</title>
+
         <link href="styling/style.css" rel="stylesheet" type="text/css" />
-        <title>idiotas</title>
         <script src="scripts/header.js" type="text/javascript" defer></script>
         <script src="scripts/footer.js" type="text/javascript" defer></script>
 
@@ -40,35 +34,37 @@
         <header-component></header-component>
         
         <main>
-            <!--SPANISH FLAG-->
+             
             <div class="arenaTitle">
                 <h1>ARENAS TO PRACTICE</h1>
                 <img src="images/spanish.svg" style="width:37px"> <!--SPANISH FLAG-->
             </div>
 
-
-            <p>Choose an arena to get started</p>
+            <p id="chooseArena">Select an arena to get started</p>
             
-            
-            <section class="arenaSelect">
-                <a href="practiceMarket.html"> <img class="zoom" src="/images/practiceMarket.png" style="width:30%;max-width:200px" alt="go to arena"> </a> 
-                <h3>THE MARKET</h3>
-            </section>
+            <div class="selectArena">
 
-            <section class="arenaSelect">
-                <img class="zoom" src="/images/practiceMarket.png"> <!--CHANGE IT TO THE RIGHT ILLUSTRATION-->
-                <h3>THE BAR</h3>
-            </section>
+                <section class="arenaSelect">
+                    <a href="practiceMarket.html"> <img class="zoom" src="/images/practiceMarket.png" style="width:30%;max-width:200px" alt="go to arena"> </a> 
+                    <h3>THE MARKET</h3>
+                </section>
+    
+                <section class="arenaSelect">
+                    <img class="zoom" src="/images/practiceMarket.png"> <!--CHANGE IT TO THE RIGHT ILLUSTRATION-->
+                    <h3>THE BAR</h3>
+                </section>
+    
+                <section class="arenaSelect">
+                    <img class="zoom" src="/images/practiceMarket.png"> <!--CHANGE IT TO THE RIGHT ILLUSTRATION-->
+                    <h3>THE KITCHEN</h3>
+                </section>
+    
+                <section class="arenaSelect">
+                    <img class="zoom" src="/images/practiceMarket.png"> <!--CHANGE IT TO THE RIGHT ILLUSTRATION-->
+                    <h3>THE SCHOOL</h3>
+                </section>
 
-            <section class="arenaSelect">
-                <img class="zoom" src="/images/practiceMarket.png"> <!--CHANGE IT TO THE RIGHT ILLUSTRATION-->
-                <h3>THE KITCHEN</h3>
-            </section>
-
-            <section class="arenaSelect">
-                <img class="zoom" src="/images/practiceMarket.png"> <!--CHANGE IT TO THE RIGHT ILLUSTRATION-->
-                <h3>THE SCHOOL</h3>
-            </section>
+            </div>
 
         </main>
 
