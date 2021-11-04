@@ -1,106 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title> Idiomas por Idiotas </title>
-    <style>
-        body {
-            background: #F1D09D;
-        }
+    <head>
+		
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=page" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Courses</title>
 
-        div {
-            border-radius: 20px;
-        }
+    </head>
 
-        .courseTypes {
-            background: #417A9A;
-            color: white;
-        }
+	<body>
 
-        #courseformContainer {
-            background: #D5754D;
-        }
+		<header> <!-- NAVBAR -->
 
-        form {
-            color: white;
-        }
-    </style>
-</head>
+			<div class="Logo"><img src="images/logo.svg" height="37"></div> <!-- LOGO -->
 
-<body>
-    <h1>Join our physical couses!</h1>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Vivamus fermentum libero et aliquam sollicitudin. Nulla
-        id lorem eget nunc viverra facilisis. Cras fringilla faucibus
-        eros at tristique. Morbi vestibulum lacus.
-    </p>
-    <h2>Where?</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Cras non velit id enim cursus posuere. Aliquam malesuada, sapien.
-    </p>
+			<ul> <!-- NAVBAR OPTIONS -->
+				<li><a href="practice/practiceHome.html" id="practice">PRACTICE</a></li>
+				<li><a href="test/testHome" id="test">TEST</a></li>
+				<li><a href="courses.html" id="courses">COURSES</a></li>
+				<li><a href="about.html" id="about">ABOUT US</a></li>
+				<li style="line-height: 28px;">EN ▼</li>
+			</ul>
+			
+		</header>
 
-    <h2>Where?</h2>
+		<main> <!-- SITE CONTENT -->
 
-    <div class="courseTypes">
-        <h3>Regular course 3 weeks</h3>
-        <p> En tekst om hvem det passer for og tidspunktene. </p>
-        <ul>
-            <li>October</li>
-            <li>November</li>
-            <li>December</li>
-            <li>Januar</li>
-        </ul>
-        <p>PRICE: 100 euro</p>
-    </div>
+			<div class="homeBox1">
 
-    <div class="courseTypes">
-        <h3>Intensive course 4 days</h3>
-        <p> En tekst om hvem det passer for og tidspunktene.</p>
-        <ul>
-            <li>10.-13. October</li>
-            <li>10.-13. November</li>
-            <li>10.-13. December</li>
-            <li>10.-13. Januar</li>
-        </ul>
-        <p>PRICE: 100 euro</p>
-    </div>
+                <div class="homeText">
+                    <h1>JOIN OUR PHYSICAL COURSES!</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. 
+                    </p>
+                    <h2>WHERE?</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
+                        diam nonummy nibh euismod tincidunt ut laoreet dolore nisl.
+                    </p>
+                </div>
 
+                <div id="courseformContainer">
 
+                    <form action="signUpComplete.html" id="courseform">
+                        <h3 class="form-title">SIGN UP FOR A COURSE</h3>
+                        <div class="userdetails">
+                            <span class="formdetails">NAME</span>
+                            <input type="text" name="name" id="name" required />
+                        </div>
+                        <div class="userdetails">
+                            <span class="formdetails">EMAIL</span>
+                            <input type="text" name="email" id="email" required />
+                        </div>
+                        <div class="userdetails">
+                            <span class="formdetails">COURSE</span>
+                            <select name="courseType" id="courseType">
+                                <option value="intensive">Intensive</option>
+                                <option value="regular">Regular</option>
+                            </select>
+                        </div>
+                        <div class="userdetails">
+                            <span class="formdetails">MONTH</span>
+                            <select name="date" id="date">
+                                <option value="september"> September </option>
+                                <option value="oktober"> Oktober </option>
+                                <option value="november"> November </option>
+                                <option value="desember"> Desember </option>
+                            </select>
+                        </div>
+                        <div class="courseButtonContainer">
+                            <button type="submit" id="submitButton">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
 
-    <div id="courseformContainer">
-        <form action="signUpComplete.html" id="courseform">
-            <h3 class="form-title">Sign up for a course</h3>
-            <div class="userdetails">
-                <span class="formdetails"> Name: </span>
-                <input type="text" name="name" id="name" required />
+                <h2>WHEN?</h2>
+
             </div>
-            <div class="userdetails">
-                <span class="formdetails"> Email: </span>
-                <input type="text" name="email" id="email" required />
-            </div>
-            <div class="userdetails">
-                <span class="formdetails"> Course: </span>
-                <select name="courseType" id="courseType">
-                    <option value="intensive"> Intensive </option>
-                    <option value="regular"> Regular </option>
-                </select>
-            </div>
-            <div class="userdetails">
-                <span class="formdetails"> Month: </span>
-                <select name="date" id="date">
-                    <option value="september"> September </option>
-                    <option value="oktober"> Oktober </option>
-                    <option value="november"> November </option>
-                    <option value="desember"> Desember </option>
-                </select>
-            </div>
-            <div class="courseButtonContainer">
-                <button type="submit" id="courseButton"> Submit </button>
-            </div>
-        </form>
-    </div>
 
-</body>
+            <div class="homeBox2">
+
+                <div class="courseTypes">
+                    <h3>REGULAR COURSE 3 WEEKS</h3>
+                    <p> En tekst om hvem det passer for og tidspunktene. </p>
+                    <ul>
+                        <li>October</li>
+                        <li>November</li>
+                        <li>December</li>
+                        <li>Januar</li>
+                    </ul>
+                    <p>PRICE: 100 ¢</p>
+                </div>
+
+                <div class="courseTypes">
+                    <h3>INTENSIVE COURSE 4 DAYS</h3>
+                    <p> En tekst om hvem det passer for og tidspunktene.</p>
+                    <ul>
+                        <li>10.-13. October</li>
+                        <li>10.-13. November</li>
+                        <li>10.-13. December</li>
+                        <li>10.-13. Januar</li>
+                    </ul>
+                    <p>PRICE: 100 ¢</p>
+                </div>
+
+            </div>
+
+        </main>
+
+		<footer> <!-- FOOTER -->
+
+			<div class="contactInfo"> <!-- CONTACT INFO -->
+				<p>Idiomas Por Idiotas
+				<br>mail@outlook.com
+				<br>+47 123 45 678</p>
+			</div>
+
+			<div class="socialMedia"> <!-- SOCIAL MEDIA ICON / LINKS -->
+				<a href="http://www.facebook.com"> <img src="images/FB.svg"> </a>
+				<a href="http://www.instagram.com"> <img src="images/IG.svg"> </a>
+				<a href="mailto:mail@outlook.com"> <img src="images/mail.svg" target="_blank"> </a>
+			</div>
+
+			<div class="pageLinks"> <!-- LINK TO PAGES -->
+				<a href="http://about.html">Contact us</a>
+				<a href="http://courses.html">Join a physical course!</a>
+			</div>
+			
+		</footer>
+
+	</body>
+
 </html>

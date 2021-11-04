@@ -1,27 +1,86 @@
   
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title> Contact form </title>
-</head>
-<body>
+    <head>
+		
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=page" />
+      <link rel="stylesheet" href="style.css" />
+      <title>About Us</title>
 
-    <div id="contactformcontainer">
-        <form id="contactform">
-            <span class="contactdetails">
-                <input type="text" placeholder="Name" name="name" class="forminput" required />
-            </span>
-            <span class="contactdetails">
-                <input type="text" placeholder="Email" name="email" class="forminput" required />
-            </span>
-            <div class="contactdetails">
-            <textarea placeholder="Message" name="message" rows="10" cols="50"></textarea>
-            </div>
-            <br />
-            <button type="submit" id="contactButton"> Submit </button>
-        </form>
-    </div>
-</body>
+    </head>
+
+	<body>
+
+		<header> <!-- NAVBAR -->
+
+			<div class="Logo"><img src="images/logo.svg" height="37"></div> <!-- LOGO -->
+
+			<ul> <!-- NAVBAR OPTIONS -->
+				<li><a href="practice/practiceHome.html" id="practice">PRACTICE</a></li>
+				<li><a href="test/testHome" id="test">TEST</a></li>
+				<li><a href="courses.html" id="courses">COURSES</a></li>
+				<li><a href="about.html" id="about">ABOUT US</a></li>
+				<li style="line-height: 28px;">EN ▼</li>
+			</ul>
+			
+		</header>
+
+		<main> <!-- SITE CONTENT -->
+
+			<div class="homeBox1">
+				Box 1
+			</div>
+
+			<div class="homeBox2">
+
+                <div id="contactFormBox">
+
+                    <form id="contactForm">
+
+                        <span>
+                            <input type="text" placeholder="Name"  id="contactDetails" class="formInput" required />
+                        </span>
+
+                        <span>
+                            <input type="text" placeholder="Email"  id="contactDetails" class="formInput" required />
+                        </span>
+
+                        <div>
+                            <textarea placeholder="Message"  id="contactDetails" rows="9" cols="40"></textarea>
+                        </div>
+
+                        <button type="submit" id="submitButton">SUBMIT</button>
+                    </form>
+                </div>
+
+			</div>
+
+		</main>
+
+		<footer> <!-- FOOTER -->
+
+			<div class="contactInfo"> <!-- CONTACT INFO -->
+				<p>Idiomas Por Idiotas
+				<br>mail@outlook.com
+				<br>+47 123 45 678</p>
+			</div>
+
+			<div class="socialMedia"> <!-- SOCIAL MEDIA ICON / LINKS -->
+				<a href="http://www.facebook.com"> <img src="images/FB.svg"> </a>
+				<a href="http://www.instagram.com"> <img src="images/IG.svg"> </a>
+				<a href="mailto:mail@outlook.com"> <img src="images/mail.svg" target="_blank"> </a>
+			</div>
+
+			<div class="pageLinks"> <!-- LINK TO PAGES -->
+				<a href="http://about.html">Contact us</a>
+				<a href="http://courses.html">Join a physical course!</a>
+			</div>
+			
+		</footer>
+
+	</body>
+
 </html>

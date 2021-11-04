@@ -1,23 +1,69 @@
 ﻿<!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title> Idiomas por Idiotas</title>
-    <style>
-        body {
-            background: #F1D09D;
-        }
-    </style>
-</head >
-<body>
-    <img src="images/Checkmark.png" id="checkmark" />
-    <h1> Sign up complete</h1>
-    <p>
-        We have sent you an email with the details about the course and
-        your schedule, and your booking confirmation. We look forward to seeing you!
-    </p>
-    <button id="backToCourses" onclick="courses.html"> &lt;-- TO COURSES </button>
-    <A HREF="courses.html"> &lt;-- TO COURSES </A>
-</body>
-</html >
+    <head>
+		
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=page" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Sign Up Complete!</title>
+
+    </head>
+
+	<body>
+
+		<header> <!-- NAVBAR -->
+
+			<div class="Logo"><img src="images/logo.svg" height="37"></div> <!-- LOGO -->
+
+			<ul> <!-- NAVBAR OPTIONS -->
+				<li><a href="practice/practiceHome.html" id="practice">PRACTICE</a></li>
+				<li><a href="test/testHome" id="test">TEST</a></li>
+				<li><a href="courses.html" id="courses">COURSES</a></li>
+				<li><a href="about.html" id="about">ABOUT US</a></li>
+				<li style="line-height: 28px;">EN ▼</li>
+			</ul>
+			
+		</header>
+
+		<main> <!-- SITE CONTENT -->
+
+			<div class="SignUpComplete">
+
+                <img src="images/Checkmark.png" id="checkMark">
+
+                <h1 style="margin-bottom: 0px;">SIGN UP COMPLETE</h1>
+
+                <p style="text-align: center;"> We have sent you an email with the details about the course and your schedule, <br>
+                    along with your booking confirmation. We look forward to seeing you!</p>
+
+                <button id="submitButton" onclick="courses.html">&longleftarrow; BACK TO COURSES </button>
+			</div>
+
+		</main>
+
+		<footer> <!-- FOOTER -->
+
+			<div class="contactInfo"> <!-- CONTACT INFO -->
+				<p>Idiomas Por Idiotas
+				<br>mail@outlook.com
+				<br>+47 123 45 678</p>
+			</div>
+
+			<div class="socialMedia"> <!-- SOCIAL MEDIA ICON / LINKS -->
+				<a href="http://www.facebook.com"> <img src="images/FB.svg"> </a>
+				<a href="http://www.instagram.com"> <img src="images/IG.svg"> </a>
+				<a href="mailto:mail@outlook.com"> <img src="images/mail.svg" target="_blank"> </a>
+			</div>
+
+			<div class="pageLinks"> <!-- LINK TO PAGES -->
+				<a href="http://about.html">Contact us</a>
+				<a href="http://courses.html">Join a physical course!</a>
+			</div>
+			
+		</footer>
+
+	</body>
+
+</html>
