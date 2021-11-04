@@ -233,6 +233,3 @@ getImageFromFile()
     updateCounterText()
 
 })
-
-
-
