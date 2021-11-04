@@ -1,104 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testHome</title>
-    <link rel= "stylesheet" href= "styling/style.css">
-</head>
-<body>
-     <h1>Test your skills!</h1> 
-     <img src="spanish.svg" alt="Spanish flag icon" id="flag" width= 10%>
+<html>
+    <head>
 
-     <!--Market-->
-     <div class="arenaActive">
-        <h2>Market</h2>
-        <p>Lorem ipsum dolor sit amet consectetur</p>
-        <a href="testMarket.html" id="market" class="buttonActive">Try --></a>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="styling/style.css" rel="stylesheet" type="text/css" />
+        <title>idiotas</title>
+        <script src="scripts/header.js" type="text/javascript" defer></script>
+        <script src="scripts/footer.js" type="text/javascript" defer></script>
+
+    </head>
+
+    <body>
+       
+      <header-component></header-component>
+
+      <main>
         
-     </div>
+         <h1>Test your skills!</h1> 
+         <img src="spanish.svg" alt="Spanish flag icon" id="flag" width= 10%>
 
-     <!--Kitchen-->
-     <div >
-        <h2>Kitchen</h2>
-        <p>Lorem ipsum dolor sit amet consectetur</p>
-        <button type="button" >Try --></button>
-     </div>
+         <!--Market-->
+         <div class="arenaActive">
+            <h2>Market</h2>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <a href="testMarket.html" id="market" class="buttonActive">Try --></a>
+            
+         </div>
 
-     <!--Bar-->
-     <div class="arenaInactive">
-        <h2>Bar</h2>
-        <p>Lorem ipsum dolor sit amet consectetur</p>
-        <button type="button" class="buttonInactive" disabled>Practice arena before testing</button> <!--Inactive button, bruker disabled.-->
-     </div>
+         <!--Kitchen-->
+         <div >
+            <h2>Kitchen</h2>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <button type="button" >Try --></button>
+         </div>
 
-     <!--School-->
-     <div >
-        <h2>School</h2>
-        <p>Lorem ipsum dolor sit amet consectetur</p>
-        <button type="button" disabled>Practice arena before testing</button> <!--Inactive button, bruker disabled.-->
-     </div>
+         <!--Bar-->
+         <div class="arenaInactive">
+            <h2>Bar</h2>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <button type="button" class="buttonInactive" disabled>Practice arena before testing</button> <!--Inactive button, bruker disabled.-->
+         </div>
 
+         <!--School-->
+         <div >
+            <h2>School</h2>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <button type="button" disabled>Practice arena before testing</button> <!--Inactive button, bruker disabled.-->
+         </div>
+         
+      </main>   
 
-
-<!--
-<style>
-      .arenaActive {                          /*Styling for de to aktive boksene.*/
-         position: absolute;
-         width: 1002px;
-         height: 184px;
-         left: 219px;
-         top: 253px;
-
-         /* Lys blå */
-         background: #E3F1F4;
-         border-radius: 20px;                 
-   }
-
-      .buttonActive{
-         position: absolute;
-         width: 128px;
-         height: 61px;
-         left: 1033px;
-         top: 539px;
-
-         /* grønn */
-
-         background: #799466;
-         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-         border-radius: 10px;
-      }
-
-      .arenaInactive {                        /*Styling for de to ikke aktive boksene.*/
-         position: absolute;
-         width: 1002px;
-         height: 184px;
-         left: 219px;
-         top: 675px;
-
-         background: #FFEDE0;
-         border-radius: 20px;
-      }
-
-      .buttonInactive{
-         position: absolute;
-         width: 205px;
-         height: 88px;
-         left: 986px;
-         top: 729px;
-
-         font-family: Montserrat;
-         font-style: normal;
-         font-weight: 500;
-         font-size: 20px;
-         line-height: 32px;
-         /* or 160% */
-         text-align: center;
-         /* havblå */
-         color: #417A9A;
-      }
-</style> -->
+      <footer-component></footer-component>
+  
+  </body>
     
-</body>
-</html>
+<html>
+
+
+
+   <!--
+   <style>
+         .arenaActive {                          /*Styling for de to aktive boksene.*/
+            position: absolute;
+            width: 1002px;
+            height: 184px;
+            left: 219px;
+            top: 253px;
+
+            /* Lys blå */
+            background: #E3F1F4;
+            border-radius: 20px;                 
+      }
+
+         .buttonActive{
+            position: absolute;
+            width: 128px;
+            height: 61px;
+            left: 1033px;
+            top: 539px;
+
+            /* grønn */
+
+            background: #799466;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+         }
+
+         .arenaInactive {                        /*Styling for de to ikke aktive boksene.*/
+            position: absolute;
+            width: 1002px;
+            height: 184px;
+            left: 219px;
+            top: 675px;
+
+            background: #FFEDE0;
+            border-radius: 20px;
+         }
+
+         .buttonInactive{
+            position: absolute;
+               width: 205px;
+               height: 88px;
+               left: 986px;
+               top: 729px;
+
+               font-family: Montserrat;
+               font-style: normal;
+               font-weight: 500;
+               font-size: 20px;
+               line-height: 32px;
+               /* or 160% */
+               text-align: center;
+               /* havblå */
+               color: #417A9A;
+            }
+      </style> -->
