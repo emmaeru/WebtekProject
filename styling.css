@@ -1,105 +1,236 @@
-/* LEGGE TIL FLERE STYLING-FILER KANSKJE??
-	-en egen til grid, eller flere?
-	-noen sider trenger kanskje egne, eller kan det inkluderes i html?
-	-annet?
-*/
 
-
-/*ADD COLORS++++*/
-
-html {
-    width: 100%;
-    height: 100%;
+/* ALL */
+html, body {
     margin: 0;
     padding: 0;
-    color: #00000;
-    background-color: #F1D09D;
+    height: 100%;
+    background-color: var(--yellow);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
 
-
-body{
-	margin: auto;
-	font-family: "Roboto", Helvetica, sans-serif;
-	font-size: 18px;
-	max-width: 700px;
-	/*color:*/
+/* COLORS */
+:root {
+    --yellow: #F1D09D;
+    --peach: #D5754D;
+    --red: #9F3B00;
+    --dark: #341E11;
+    --text: #F9F3E9;
+    --babyBlue: #E3F1F4;
+    --lightPeach: #FFEDE0;
+    --Peach2: #FADECB;
+    --Peach3: #F0BA95;
+    --green: #799466;
+    --blue: #417A9A;
 }
 
-
-p{
-    font-size: 18px;
+/* PAGE CONTAINER */
+body {
+    display: flex;
+    flex-direction: column;
 }
 
+p {
+    font-weight: 500;
+    line-height: 28px;
+}
 
+/* MAIN CONTAINER */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+}
 
-/*TITLES*/
+/* NAVBAR CONTAINER */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-/*EDIT AND WRITE WHERE THEY ARE USED*/
-h1,h3,h4,h5 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+/* NAVBAR */
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    margin: 0;
+}
+
+/* HOME / LOGO BUTTON */
+.Logo {
+    margin: auto 0px auto 15px;
+    height: auto;
+    width: auto;
+}
+
+/* NAVBAR OPTIONS */
+li {
+    list-style-type: none;
+    padding: 25px 60px 25px 25px;
+}
+
+/* TITLES */
+h1,h2,h3,h4,h5 {
   	font-family: "Montserrat", Helvetica, sans-serif;
-  }
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
 
 h1 {
-    font-weight: 900;
-    font-size: 2.7em;
-    margin-bottom: 5px;
-    text-align: center;
-    color: #523427;
+    font-size: 50px;
+    color: var(--green);
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--red);
 }
 
 h3 {
-    font-size: 1.2em;
-    font-weight: 800;
-    color: #F1D09D;
-    padding-left: 15px;
-    margin: 45px 0px 5px 0px;
+    font-size: 16px;
+    color: var(--text);
 }
 
 h4 {
-    font-size: 1.0em;
-    font-weight: 800;
-    text-align: center;
-    color: #9F3B00;
-    margin: 35px 0px -15px 0px;
+    font-size: 15px;
+    color: var(--text);
 }
 
 h5 {
-    font-size: 0.81em;
+    font-size: 12px;
     font-weight: 500;
-    text-align: center;
-    color: #523427;
-    margin: 0px 0px 0px 0px;
+    color: var(--dark);
 }
 
-
-
-
-/* MENU!!*/
-
-
-
-/*IMAGES*/
+/* IMAGES */
 img {
-    display: block;
-    margin: auto;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
 }
 
+/* LINKS */
+a {
+    text-decoration: none;
+    color: black;
+    line-height: 28px;
+}
 
-/*LINKS ETC*/
-	/*example:
-	#link {
-  	height: 75%;
-  	transition: 0.4s;
-	} */
+a:hover, a:active {
+    color: var(--red);
+}
 
-
-/*footer*/
+/* FOOTER */
 footer {
-    margin: 50px 0px 15px 0px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
 }
 
-/*legg til for small screens: When the screen gets smaller than 1000px */
-	/*@media only screen and (max-width: 810px) {
-	....}
-*/
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
 
+.socialMedia {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 150px;
+    justify-content: space-between;
+}
+
+.pageLinks {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+/* SCALING */
+@media only screen and (max-width: 600px) {
+    header ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 0;
+      padding: 0;
+    }
+}
+
+/* CONTENT CONTAINER 1 HOME */
+.homeBox1 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+}
+
+.homeText {
+    width: 30%;
+}
+
+#startLearning {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CONTENT CONTAINER 2 HOME */
+.homeBox2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--peach);
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+#selectLanguage {
+    height: 75px;
+    vertical-align: middle;
+    text-decoration: underline;
+}
+
+.flagSelection {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+/* STANDARD BUTTON */
+#submitButton {
+    background-color: var(--Peach2);
+    height: 55px;
+    width: 330px;
+    border: 0px solid;
+    border-radius: 30px;
+    box-shadow: -3px -7px var(--Peach3) inset;
+
+    color: var(--peach);
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    margin: 25px;
+}
