@@ -19,7 +19,11 @@ html, body {
     --lightPeach: #FFEDE0;
     --Peach2: #FADECB;
     --Peach3: #F0BA95;
+    --peachShadow: #CC6C43;
+    --shadow: #03030334;
+    --lightShadow: #ede4d5;
     --green: #799466;
+    --greenShadow: #688057;
     --blue: #417A9A;
 }
 
@@ -152,13 +156,14 @@ a:hover, a:active {
 }
 
 /* SQUARE BUTTON */
-#squareButton {
-    background-color: var(--peach);
+.squareButton {
+    cursor:pointer; 
+    background-color: var(--text);
     border: 0px solid;
     border-radius: 10px;
     box-shadow: 4px 4px 2px #03030334;
 
-    color: var(--text);
+    color: var(--dark);
     font-family: "Montserrat", Helvetica, sans-serif;
     font-weight: 800;
     font-size: 16px;
@@ -168,6 +173,28 @@ a:hover, a:active {
     padding: 15px 50px 15px 50px;
 }
 
+.squareButton:hover {
+    box-shadow: -3px -7px var(--lightShadow) inset;
+}
+
+#checkButton, #backAbout, #backCourses {
+    background-color: var(--peach);
+    color: var(--text);
+}
+
+
+#checkButton:hover,#backAbout:hover, #backCourses:hover {
+    box-shadow: -3px -7px var(--peachShadow) inset;
+}
+
+#testMarketButton, #testKitchenButton {
+    background-color: var(--green);
+    color: var(--text);
+}
+
+#testMarketButton:hover, #testKitchenButton:hover {
+    box-shadow: -3px -7px var(--greenShadow) inset;
+}
 /* FOOTER */
 footer {
     flex: 1;
@@ -384,4 +411,55 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+}
+
+
+/* Kode i testHome Ragna*/
+.arenaActive {
+    width: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--babyBlue);
+    padding: 20px 150px 20px 150px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.arenaActive h2 {
+    color: var(--dark);
+}
+
+.arenaInactive {
+    width: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--lightPeach);
+    padding: 20px 150px 20px 150px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+/* Kode i testMarket Ragna, rakk ikke se på det, men må få sirklene til å ligge på rekke */
+
+#circle-list {
+    width: 20%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.circle{
+    width:20px;
+}
+
+#marketInput {
+    border: 0px solid;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 7.5px;
 }
