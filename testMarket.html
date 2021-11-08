@@ -98,20 +98,20 @@
                     <label for="marketInput"></label>
                     <input type="text" id="marketInput" name="marketInput">
                     <!--Sjekker ordet mot fasiten, kan kun sjekke en gang per ord-->
-                    <input type="submit" name="checkButton" id="checkButton" value="CHECK" class="duringTest" />
+                    <input type="submit" name="checkButton" id="checkButton" value="CHECK" class="squareButton" />
                 </form>
             </div>
             
             <!-- Går til neste ord, skifter bilde-->
-            <button id="nextButton" class="duringTest" class="buttonNext"> NEXT -> </button>
+            <button id="nextButton" class="squareButton" style="background-color: var(--text); color: var(--dark);"> NEXT &longrightarrow; </button>
 
             <h3 id="feedbackMessage" style="visibility:hidden"></h3>
 
             <!-- Får siden til å refreshe-->
-            <button id="repeatButton" class="duringTest" style="display:none;" onClick="history.go(0)" > REPEAT TEST </button>
+            <button id="repeatButton" class="squareButton" style="display:none; " onClick="history.go(0)" > REPEAT TEST </button>
 
             <!-- Linker til testHome.html-->
-            <button id="moretestsButton" class="duringTest" style="display:none;"  onclick="location.href = 'testHome.html';"> MORE TESTS </button>
+            <button id="moretestsButton" class="squareButton" style="display:none; " onclick="location.href = 'testHome.html';"> MORE TESTS &longrightarrow; </button>
 
         </main>
 
@@ -123,4 +123,4 @@
     
     </body>
       
-  <html>
+  </html>
