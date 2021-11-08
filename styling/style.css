@@ -179,13 +179,13 @@ a:hover, a:active {
     box-shadow: -3px -7px var(--lightShadow) inset;
 }
 
-#checkButton, #backAbout, #backCourses {
+#checkButton, #backAbout, #backCourses, #toTestMarket {
     background-color: var(--peach);
     color: var(--text);
 }
 
 
-#checkButton:hover,#backAbout:hover, #backCourses:hover {
+#checkButton:hover,#backAbout:hover, #backCourses:hover, toTestMarket:hover {
     box-shadow: -3px -7px var(--peachShadow) inset;
 }
 
