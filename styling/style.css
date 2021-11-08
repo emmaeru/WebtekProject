@@ -465,3 +465,15 @@ footer {
     padding: 15px;
     margin: 7.5px;
 }
+
+#counter{
+    color: white;
+    position: absolute;
+    bottom: -30px;
+    right: 50%;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+    /*text-shadow: 2px 2px 8px #D5754D; */
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
