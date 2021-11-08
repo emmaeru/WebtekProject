@@ -142,6 +142,7 @@ a:hover, a:active {
 
 /* ROUND BUTTON */
 #roundButton {
+    cursor:pointer; 
     background-color: var(--Peach2);
     border: 0px solid;
     border-radius: 30px;
@@ -156,6 +157,10 @@ a:hover, a:active {
     margin: 25px;
     padding: 15px 100px 15px 100px;
 }
+
+#roundButton:hover {
+        box-shadow: 4px 4px 2px var(--shadow);
+    }
 
 /* SQUARE BUTTON */
 .squareButton {
