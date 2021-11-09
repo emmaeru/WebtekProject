@@ -2,12 +2,12 @@
 
 /*This JavaScript file will make the image cards rotate like a carousel.*/
 
-const im = ["images/iconEmpty.png", "images/iconEgg.png", "images/iconBanana.png", "images/iconHen.png", "images/iconCarrot.png","images/iconSeller.png","images/iconBread.png","images/iconCash.png","images/iconFish.png","images/iconApple.png","images/iconDog.png"];
+const im = ["images/iconEgg.png", "images/iconBanana.png", "images/iconHen.png", "images/iconCarrot.png","images/iconSeller.png","images/iconBread.png","images/iconCash.png","images/iconFish.png","images/iconApple.png","images/iconDog.png"];
 let prev = document.getElementById("previous");
 let curr = document.getElementById("current");
 let next = document.getElementById("next");
 const nextButtonCarousel = document.getElementById("nextButton"); // endret fra nextButton til nextButtonCarousel
-let counterCarousel = 1;                                          // er endret fra "counter" til "counterCarousel"
+let counterCarousel = 0;                                          // er endret fra "counter" til "counterCarousel"
 /*let counter2 = 0;*/
 
 /*Implementerer canvaene mine.
