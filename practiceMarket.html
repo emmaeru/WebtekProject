@@ -10,7 +10,13 @@
         <link href="styling/style.css" rel="stylesheet" type="text/css" />
         <script src="scripts/header.js" type="text/javascript" defer></script>
         <script src="scripts/footer.js" type="text/javascript" defer></script>
-
+        
+                <script type="application/javascript">        
+                function toggleInformationBox(message) {
+                    let isVisible = document.getElementById('info-box').style.visibility !== 'hidden';
+                    document.getElementById('info-box').style.visibility = isVisible ? 'hidden' : 'visible';
+                }
+                </script>
     </head>
 
     <body>
@@ -18,6 +24,7 @@
         <header-component></header-component>
         
         <main>
+            <h1 id="marketPlace">AT THE MARKET</h1>
 
             <div id="app">
                 <a href="image.svg"></a>
@@ -26,9 +33,15 @@
                 <!-- Dette er knappen som dukker opp når man har trykket på 10/10 -->
                 <!-- TODO: endre href her til å gå til riktig side  -->
                 <a href="testMarket.html" id="toTestMarket" class="squareButton">TEST MY SKILLS &longrightarrow; </a>
+            </div>
 
+            <div id="info-box" style="visibility:hidden;">
+                Select an clickable object to reveal the foreign expression
             </div>
             
+            <div id="gameInstructions" onclick="toggleInformationBox()">?</div>
+
+
         </main>
     
         <footer-component></footer-component>
