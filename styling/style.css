@@ -490,31 +490,34 @@ footer {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#carouselList {
+#carouselList{
+    flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-
-    padding: 1%;
-    width: 90%;
-    gap: 5%;
-}
-
-#current {
-    flex: 2;
-    align-self: center;
-    border: 1px solid green;
+    border: 1px solid blue;
 }
 
 #previous {
-    flex: 1;
-    align-self: flex-start;
+    max-width: 50%;
     border: 1px solid red;
+    background-color: var(--babyBlue);
+    padding: 5%;
+    border-radius: 20px;
 }
 
 #next {
-    flex: 1;
-    align-self: flex-end;
+    max-width: 50%;
     border: 1px solid black;
+    background-color: var(--babyBlue);
+    padding: 5%;
+    border-radius: 20px;
+}
+
+#current {
+    max-width: 100%;
+    border: 1px solid green;
+    background-color: var(--lightPeach);
+    padding: 5%;
+    border-radius: 20px;
 }
