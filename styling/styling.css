@@ -1,14 +1,14 @@
 /* ALL */
 body {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+
     background-color: var(--yellow);
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    border: 1px solid red;
+
+    margin: 0;
+    padding: 0;
 }
 
 /* COLORS */
@@ -30,19 +30,20 @@ body {
     --blue: #417A9A;
 }
 
+/* BODY TEXT */
+p {
+    font-weight: 500;
+    line-height: 28px;
+}
+
 /* MAIN CONTAINER */
 main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 50px;
     border: 1px solid blue;
-}
-
-main, p { 
-    font-weight: 500;
-    line-height: 28px;
 }
 
 /* OLD NAVBAR CONTAINER */
@@ -64,12 +65,10 @@ header ul {
     display: flex;
     flex-direction: row wrap;
     justify-content: space-between;
-    gap: 10%;
 }
 
 .Logo {
     flex: 1;
-    align-self: left;
     border: 1px solid green;
 }
 

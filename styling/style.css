@@ -1,11 +1,14 @@
 /* ALL */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body {
+    display: flex;
+    flex-direction: column;
+
     background-color: var(--yellow);
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+
+    margin: 0;
+    padding: 0;
 }
 
 /* COLORS */
@@ -27,12 +30,6 @@ html, body {
     --blue: #417A9A;
 }
 
-/* PAGE CONTAINER */
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 /* BODY TEXT */
 p {
     font-weight: 500;
@@ -46,41 +43,38 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
+    border: 1px solid blue;
 }
 
-
-/* (OLD) NAVBAR CONTAINER*/
+/* OLD NAVBAR CONTAINER */
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1%;
 
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 1.2px;
 }
 
-/* NAVBAR*/
+/* NAVBAR */
 header ul {
+    border: 1px solid green;
+    flex: 1;
     display: flex;
-    flex-direction: row;
-    justify-content:right;
-    margin: 0;
+    flex-direction: row wrap;
+    justify-content: space-between;
 }
 
-
-/* HOME / LOGO BUTTON */
 .Logo {
-    margin: auto 0px auto 15px;
-    height: auto;
-    width: auto;
+    flex: 1;
+    border: 1px solid green;
 }
 
 /* NAVBAR OPTIONS */
 li {
     list-style-type: none;
-    padding: 25px 60px 25px 25px;
 }
 
 /* TITLES */
@@ -202,6 +196,7 @@ a:hover, a:active {
 #testMarketButton:hover, #testKitchenButton:hover {
     box-shadow: -3px -7px var(--greenShadow) inset;
 }
+
 /* FOOTER */
 footer {
     flex: 1;
@@ -292,12 +287,9 @@ footer {
 
 /* ABOUT TOP CONTAINER */
 .aboutTop {
-    flex:1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
-    padding: 40px;
 }
 
 #aboutText {
@@ -306,18 +298,18 @@ footer {
 
 /* ABOUT BOTTOM CONTAINER */
 .aboutBottom {
-    width: 100%;
-    padding: 50px;
-    flex:1;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--peach);
     justify-content: center;
+
+    padding: 5%;
+    width: 90%;
+    gap: 5%;
+    background-color: var(--peach);
 }
 
 #contactUs {
-    width: 25%;
     color: var(--text);
 }
 
