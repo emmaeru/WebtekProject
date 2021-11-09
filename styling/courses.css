@@ -1,0 +1,57 @@
+
+/* COURSES TOP CONTAINER */
+.coursesTop {
+    letter-spacing: 0.05em;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 100%;
+    padding-top: 75px;
+}
+
+.coursesText {
+    width: 30%;
+}
+
+/* COURSES FORM INFILL */
+#personalia {
+    letter-spacing: 0.1em;
+    border: 0px solid;
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px;
+    margin: 3px 0px 25px 0px;
+}
+
+#peronaliaTag {
+    margin-left: 15px;
+    color: var(--text);
+    letter-spacing: 0.1em;
+}
+
+/* COURSES FORM CONTAINER */
+#SignUpCourse {
+    height: 550px;
+    width: 280px;
+    border-radius: 20px;
+    padding: 15px 60px 25px 30px;
+    background-color: var(--peach);
+    margin-bottom: 100px;
+}
+
+/* COURSE TYPE CONTAINERS */
+.courseType {
+    width: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    padding: 20px 150px 20px 150px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    color: var(--text);
+}
