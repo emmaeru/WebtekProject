@@ -50,7 +50,7 @@ main {
 }
 
 
-/* OLD NAVBAR CONTAINER
+/* (OLD) NAVBAR CONTAINER*/
 header {
     display: flex;
     flex-direction: row;
@@ -61,14 +61,14 @@ header {
     letter-spacing: 1.2px;
 }
 
-/* NAVBAR
+/* NAVBAR*/
 header ul {
     display: flex;
     flex-direction: row;
     justify-content:right;
     margin: 0;
 }
-*/
+
 
 /* HOME / LOGO BUTTON */
 .Logo {
