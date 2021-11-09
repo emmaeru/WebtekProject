@@ -489,3 +489,32 @@ footer {
     /*text-shadow: 2px 2px 8px #D5754D; */
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+#carouselList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1%;
+    width: 90%;
+    gap: 5%;
+}
+
+#current {
+    flex: 2;
+    align-self: center;
+    border: 1px solid green;
+}
+
+#previous {
+    flex: 1;
+    align-self: flex-start;
+    border: 1px solid red;
+}
+
+#next {
+    flex: 1;
+    align-self: flex-end;
+    border: 1px solid black;
+}
