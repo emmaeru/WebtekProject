@@ -1,10 +1,16 @@
 let textBox = null;
 let text = null;
+let titleText = null;
 let subtitleText = null;
 let speakerBtn = null;
+let imageElement = null;
+let selectedElement = null;
+let selectedOptions = null;
 
 const seenObjects = {};
 let totalObjects = 0;
+
+const app = document.getElementById('app');
 
 function createTextBox() {
         
@@ -16,43 +22,51 @@ function createTextBox() {
 
     textBox.style.position = "absolute";
 
-    textBox.style.minWidth = "1px";
-    textBox.style.padding = "6px 12px";
+    textBox.style.minWidth = '8vw';
+    textBox.style.minHeight = '3vw';
+    textBox.style.padding = "16px 12px";
     textBox.style.backgroundColor = "white";
     textBox.style.boxShadow = "1px 2px 0px 0px rgba(0,0,0,0.3)";
     textBox.style.borderRadius = "6px"
 
     // Add text
-    text = document.createElement("p")
-    text.style.textAlign = "center";
-    text.style.fontWeight = 600;
-    text.style.textTransform = "uppercase"; 
-    textBox.appendChild(text)
-
+    titleText = document.createElement("p")
+    titleText.style.textAlign = "center";
+    titleText.style.fontWeight = 600;
+    titleText.style.fontSize = '1.2vw';
+    titleText.style.textTransform = "uppercase"; 
+    titleText.style.margin = "0"; 
+    textBox.appendChild(titleText)
+    
+    
     subtitleText = document.createElement("p")
-  
+    
     subtitleText.style.textAlign = "center";
-    subtitleText.style.fontSize = "12px";
+    subtitleText.style.fontSize = '0.9vw';
+    subtitleText.style.color = "grey";
     subtitleText.style.textTransform = "lowercase"; 
+    subtitleText.style.margin = "0"; 
     textBox.appendChild(subtitleText)
 
     speakerBtn = document.createElement("img");
     speakerBtn.style.position = "absolute";
     speakerBtn.style.bottom = "4px";
     speakerBtn.style.left = "4px";
-    speakerBtn.src = "image.svg";
-    speakerBtn.width = 22;
-    speakerBtn.height = 22;
+    speakerBtn.src = "images/sound.png";
+    speakerBtn.width = 10;
+    speakerBtn.height = 10;
 
     textBox.style.display = "none"; // Ikke vis tekstboks
 
+    textBox.style.transition = 'all 1s ease-out';
+
     textBox.appendChild(speakerBtn);
 
-    document.body.appendChild(textBox);
-
+    app.appendChild(textBox);
+    window.addEventListener("resize", updateTextboxPosition);          //når vindustrørelsen endrer seg, oppdater posisjon på textbox size, lager funksjonen updateTextboxPosition
 }
 
-function enableTextBox(enable, position, title, subtitle, bx, by) {
+function enableTextBox(enable) {
     if(textBox === null) {
         return;
     }
@@ -60,13 +74,17 @@ function enableTextBox(enable, position, title, subtitle, bx, by) {
     // Vis eller ikke vis textboksen
     textBox.style.display = enable ? "block" : "none";
 
-    if(position) {
-        textBox.style.top = (position.top - position.height*1.5 + by) + "px";
-        textBox.style.left = (position.left + bx) + "px";
-    }
+    const { title = '', subtitle = ''} = selectedOptions;
 
-    text.innerHTML = title || '';
+    titleText.innerHTML = title || '';
     subtitleText.innerHTML = subtitle || '';
+
+    speakerBtn.onclick = () => {
+        if(selectedOptions.audio) {
+            let audio = new Audio(selectedOptions.audio);
+            audio.play();
+        }
+    }
 
     setTimeout(() => {
         if(enable) {
@@ -76,6 +94,24 @@ function enableTextBox(enable, position, title, subtitle, bx, by) {
         }
     })
 }
+
+function setTextBoxPosition(position, textBoxPosition, options) {
+
+    textBox.style.top = (position.top - (textBoxPosition.height || position.height)) + "px";       //
+    textBox.style.left = (position.left) + "px";
+}
+
+function updateTextboxPosition() {                      
+    if(textBox === null || selectedElement === null) {                          //forhindrer at den krasjer, safty sjekk
+        return;
+    }
+
+    let position = selectedElement.getBoundingClientRect();                     // henter element
+    let positionTextBox = textBox.getBoundingClientRect();
+
+
+    setTextBoxPosition(position, positionTextBox, selectedOptions);
+}                                  
 
 function removeTextBoxOnClick(event) {
     if(textBox === null || textBox.style.display === "none") {
@@ -92,11 +128,19 @@ function removeTextBoxOnClick(event) {
 function updateCounterText() {
     const counterTextElemenet = document.getElementById("counter");
 
-    counterTextElemenet.innerText = `${Object.keys(seenObjects).length}/${totalObjects}`;
+    const countSeen = Object.keys(seenObjects).length;
+
+    counterTextElemenet.innerText = `${countSeen}/${totalObjects}`;
+
+    // Hvis man har trykket på alle objektene, vis "finish" knappen 
+    if(countSeen >= totalObjects) {
+        document.getElementById('toTestMarket').style.display = "block";
+    }
 }
 
+
 function getImageFromFile() {
-    return fetch('image.svg', {
+    return fetch('images/image.svg', {
         method: 'GET',
         headers: {
             'Content-Type': 'image/svg+xml'
@@ -114,30 +158,29 @@ function getImageFromFile() {
     })
 }
 
-function addHoverEffectToElement(nameId, {scale = 2, tx = -25, ty = -75, speed = 3, title = "Dog", subtitle = "apple", bx = 0, by = 0}) {
+function addHoverEffectToElement(nameId, options) {
+    const {scale = 2, tx = -25, ty = -75, speed = 3, title = "HELLO :D", subtitle = "Its me, mario! :D", bx = '', by = '', audio = undefined} = options;
+
     totalObjects += 1;
     
     const element = document.getElementById(nameId)
 
-    let _title = title;
-    let _subtitle = subtitle;
-    
-    const position = element.getBoundingClientRect()
-    
     element.addEventListener('mousedown', function() {
-        
-        console.log(_title, _subtitle)
-        enableTextBox(true, position, _title, _subtitle, bx, by);
 
         seenObjects[nameId] = true;     //nameid er sett
+        selectedElement = element;
+        selectedOptions = options;
         updateCounterText();
+        updateTextboxPosition();
+        setTimeout(() => {
+            enableTextBox(true);
+            updateTextboxPosition();
+        }, 100);
+
     });
 
     element.addEventListener('mouseover', function() {
         element.style = `transform: translate(${tx}%, ${ty}%) scale(${scale}); transition: all ${speed}s ease-out;`;
-        
-        
-        
     })
 
     element.addEventListener('mouseout', function() {
@@ -151,6 +194,7 @@ function addOverflowVisible(nameId) {
     element.style = "overflow: visible";
 }
 
+// Hvert av elementene har unike koordinater pga de hentes fra ulike id i svg-filen
 getImageFromFile()
 .then(() => {
 
@@ -158,7 +202,12 @@ getImageFromFile()
         scale: 1.5,
         tx: -12.5,
         ty: -42,
-        speed: 0.5
+        speed: 0.5,
+        title: 'perro',
+        subtitle: 'dog',
+        by: -400,
+        bx: -30,
+        // audio: 'sounds/Perro.mp3'
     });
     addHoverEffectToElement('Chicken', {
         scale: 1.5, 
@@ -174,19 +223,28 @@ getImageFromFile()
         scale: 2, 
         tx: -40, 
         ty: -70, 
-        speed:  0.5
+        speed:  0.5,
+        title: 'zanahoria', 
+        subtitle: 'carrot',
+        by: -42,
+        bx: -30,
+
     });
     addHoverEffectToElement('Apple', {
         scale: 2, 
         tx: -32, 
         ty: -72, 
-        speed:  0.5
+        speed:  0.5,
+        title: 'MANZANA',
+        subtitle: 'apple',
     });
     addHoverEffectToElement('Banana', {
         scale: 1.5, 
         tx: -23, 
         ty: -35, 
-        speed:  0.5
+        speed:  0.5,
+        title: 'PLATANO',
+        subtitle: 'banana',
     });
 /*    addHoverEffectToElement('Meat', {
         scale: 2, 
@@ -198,32 +256,48 @@ getImageFromFile()
         scale: 2, 
         tx: -64, 
         ty: -71, 
-        speed:  0.5
+        speed:  0.5,
+        title: 'PEZ',
+        subtitle: 'fish',
+
     });
     addHoverEffectToElement('Egg', {
         scale: 4, 
         tx: -221.5, 
         ty: -270, 
-        speed:  0.5
+        speed:  0.5,
+        title: 'HUEVO',
+        subtitle: 'egg',
+
     });
     addHoverEffectToElement('Worker', {
         scale: 1.5, 
         tx: -20, 
         ty: -20, 
-        speed:  0.5
+        speed:  0.5,
+        title: 'VENDEDORA',
+        subtitle: 'vendor',
+
     });
     addHoverEffectToElement('Bread', {
         scale: 1.5, 
         tx: -11, 
         ty: -34, 
-        speed:  0.5
+        speed:  0.5,
+        title: 'PAN',
+        subtitle: 'bread',
+
+        
     });
 
     addHoverEffectToElement('Money', {
         scale: 2.5, 
         tx: -124, 
         ty: -93, 
-        speed:  0.5
+        speed:  0.5,
+        title: 'DINERO',
+        subtitle: 'money',
+
     });
 
     addOverflowVisible("image");
@@ -233,3 +307,6 @@ getImageFromFile()
     updateCounterText()
 
 })
+
+
+
