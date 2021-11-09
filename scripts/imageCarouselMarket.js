@@ -52,7 +52,7 @@ const ctx = canvas.getContext("2d");*/
 
 function imageCarousel(){
     
-    prev.style.visibility = "visible";
+    //prev.style.visibility = "visible";
     prev.src = im[counterCarousel];
     curr.src = im[counterCarousel +1];
     next.src = im[counterCarousel +2];
