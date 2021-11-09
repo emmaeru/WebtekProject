@@ -248,12 +248,14 @@ getImageFromFile()
         title: 'PLATANO',
         subtitle: 'banana',
     });
+    
 /*    addHoverEffectToElement('Meat', {
         scale: 2, 
         tx: -72, 
         ty: -72, 
         speed:  0.5
     }); */
+
     addHoverEffectToElement('Fish', {
         scale: 2, 
         tx: -64, 

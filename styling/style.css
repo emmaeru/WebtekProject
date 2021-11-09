@@ -109,7 +109,7 @@ h4 {
 
 /* BY HEADINGS */
 h5 {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--dark);
 }
@@ -395,8 +395,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--blue);
-    padding: 20px 150px 20px 150px;
-    margin-bottom: 30px;
+    padding: 35px 70px 35px 70px;
+    gap: 5%;
+    margin-bottom: 20px;
     border-radius: 20px;
     color: var(--text);
 }
@@ -408,22 +409,25 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    margin: 0%;
 }
 
 .selectArena {
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    width: 80%;
+    max-width: 60%;
+    gap: 5%;
 }
 
 .arenaSelect {
     flex: 1;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
 }
 
 
@@ -490,34 +494,54 @@ footer {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#carouselList{
+
+.carousel {
     flex: 1;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    border: 1px solid blue;
+    justify-content: center;
+    padding: 1%;
+    gap: 5%;
 }
 
-#previous {
-    max-width: 50%;
-    border: 1px solid red;
+.previous {
+    display: flex;
+    align-content: center;
     background-color: var(--babyBlue);
-    padding: 5%;
+    margin: 5% auto 5% auto;
     border-radius: 20px;
+    filter: grayscale(100%);
+    margin-left: 50px;
 }
 
-#next {
-    max-width: 50%;
-    border: 1px solid black;
+.next {
+    display: flex;
+    align-content: center;
     background-color: var(--babyBlue);
-    padding: 5%;
+    margin: 5% auto 5% auto;
     border-radius: 20px;
+    margin-right: 50px;
 }
 
-#current {
-    max-width: 100%;
-    border: 1px solid green;
+.current {
+    display: flex;
+    align-content: center;
     background-color: var(--lightPeach);
-    padding: 5%;
+    padding: 8%;
     border-radius: 20px;
+}
+
+#previousImg {
+    margin: auto;
+    max-width: 40%;
+}
+
+#currentImg {
+    margin: auto;
+    max-width: 100%;
+}
+
+#nextImg {
+    margin: auto;
+    max-width: 40%;
 }

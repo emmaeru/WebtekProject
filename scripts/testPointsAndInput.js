@@ -79,7 +79,7 @@ function afterTestDisplay() {
     input.style.display = "none";
 }
 
-// ========To hovedfunksjoner som kalles på to knapper=====================================================================================
+// ========To hovedfunksjoner som kalles på to knapper==========================================================
 
 
 // Nr 1: Funksjonen som kalles når man trykker next, ulik funksjon etter om vi er ferdig med testen eller ikke.

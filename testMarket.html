@@ -1,29 +1,3 @@
-<!--
-    <style>
-        #previous{
-            width: 150px;
-        }
-        #current{
-            width: 250px;
-        }
-        #next{
-            width: 150px;
-        }
-        .liste {
-            display: inline-block;
-        }
-        body{
-            background:#F1D09D
-        }
-        .circle{
-            width:20px; 
-        }
-        li {
-            display: inline;
-        }
-    </style>
--->
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -68,44 +42,26 @@
                 </ul>
             </div>
 
-
-            <!--<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1600097347472/FaJTB7UrN.jpeg" id="eeveelutions" />
-            <canvas id="canvas" width="200" height="200"> </canvas>-->
-            
-            <!--<canvas id="previousC" width="150" height="200" style="border:3px
-                    dotted" >
-                    Fallback content (eg. your browser does not support canvas)
-            </canvas>
-            <canvas id="currentC" width="200" height="250" style="border:3px
-                    dotted" >
-                    Fallback content (eg. your browser does not support canvas)
-            </canvas>
-            <canvas id="nextC" width="150" height="200" style="border:3px
-            dotte" >
-                Fallback content (eg. your browser does not support canvas)
-            </canvas>-->
-
-
-            <div id="carousel">
-                <ul id="carouselList">
-                    <li class="liste"><img src="images/iconEmpty.png" class="carouselImage" id="previous" /> </li>
-                    <li class="liste"><img src="images/iconEgg.png" class="carouselImage" id="current" /> </li>
-                    <li class="liste"><img src="images/iconBanana.png" class="carouselImage" id="next" /> </li>
-                </ul>
+            <div class="carousel">
+                <div class="previous"><img src="images/iconBlue.png" id="previousImg"/></div>
+                <div class="current"><img src="images/iconEgg.png" id="currentImg"/></div>
+                <div class="next"><img src="images/iconBanana.png" id="nextImg"/></div>
             </div>
 
-            <!--Inputfieldet for å avgi svar, laget i en form.-->
-            <div id="markedAnswer">
-                <form>
-                    <label for="marketInput"></label>
-                    <input type="text" id="marketInput" name="marketInput">
-                    <!--Sjekker ordet mot fasiten, kan kun sjekke en gang per ord-->
-                    <input type="submit" name="checkButton" id="checkButton" value="CHECK" class="squareButton" />
-                </form>
+            <div class="arenaTitle" style="align-self: flex-end; margin-right: 4%;">
+                <!--Inputfieldet for å avgi svar, laget i en form.-->
+                <div id="markedAnswer">
+                    <form>
+                        <label for="marketInput"></label>
+                        <input type="text" id="marketInput" name="marketInput">
+                        <!--Sjekker ordet mot fasiten, kan kun sjekke en gang per ord-->
+                        <input type="submit" name="checkButton" id="checkButton" value="CHECK" class="squareButton" />
+                    </form>
+                </div>
+                
+                <!-- Går til neste ord, skifter bilde-->
+                <button id="nextButton" class="squareButton" style="background-color: var(--text); color: var(--dark);"> NEXT &longrightarrow; </button>
             </div>
-            
-            <!-- Går til neste ord, skifter bilde-->
-            <button id="nextButton" class="squareButton" style="background-color: var(--text); color: var(--dark);"> NEXT &longrightarrow; </button>
 
             <h3 id="feedbackMessage" style="visibility:hidden"></h3>
 

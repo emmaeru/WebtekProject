@@ -21,8 +21,8 @@ class Footer extends HTMLElement {
         </div>
 
         <div class="pageLinks"> <!-- LINK TO PAGES -->
-          <a href="http://about.html">Contact us</a>
-          <a href="http://courses.html">Join a physical course!</a>
+          <a href="about.html">Contact us</a>
+          <a href="courses.html">Join a physical course!</a>
         </div>
         
       </footer>
