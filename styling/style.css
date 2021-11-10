@@ -197,6 +197,7 @@ a:hover, a:active {
 
 /* FOOTER */
 footer {
+    align-self: flex-end;
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -243,8 +244,8 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    padding: 50px;
+    padding: 5%;
+    width: 90%;
 }
 
 .homeText {
@@ -258,15 +259,13 @@ footer {
 
 /* HOME BOTTOM CONTAINER */
 .homeBottom {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: var(--peach);
-    width: 100%;
-    height: 100%;
-    padding: 50px;
+    padding: 5%;
+    width: 90%;
 }
 
 #selectLanguage {
@@ -496,8 +495,8 @@ footer {
     background-color: var(--babyBlue);
     margin: 5% auto 5% auto;
     border-radius: 20px;
-    filter: grayscale(100%);
     margin-left: 50px;
+    filter: grayscale(100%);
 }
 
 .next {
@@ -507,27 +506,28 @@ footer {
     margin: 5% auto 5% auto;
     border-radius: 20px;
     margin-right: 50px;
+    filter: grayscale(100%);
 }
 
 .current {
     display: flex;
     align-content: center;
-    background-color: var(--lightPeach);
+    background-color: white;
     padding: 8%;
     border-radius: 20px;
 }
 
 #previousImg {
     margin: auto;
-    max-width: 40%;
+    max-width: 35%;
 }
 
 #currentImg {
     margin: auto;
-    max-width: 100%;
+    max-width: 90%;
 }
 
 #nextImg {
     margin: auto;
-    max-width: 40%;
+    max-width: 35%;
 }
