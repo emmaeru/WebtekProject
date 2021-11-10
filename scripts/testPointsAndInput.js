@@ -77,6 +77,7 @@ function afterTestDisplay() {
     checkButton.style.display = "none";
     nextButton.style.display = "none";
     input.style.display = "none";
+    feedbackMessage.style.visibility = "hidden"; // endring
 }
 
 // ========To hovedfunksjoner som kalles på to knapper==========================================================
@@ -98,6 +99,8 @@ function nextFunc() {
         scoreFeedback();
         afterTestDisplay();    
     }          
+    if (counter == (solution.length - 1))
+        nextButton.innerHTML = "SEE YOUR SCORE";
 }
 
 
@@ -105,10 +108,13 @@ function nextFunc() {
 function checkFeedback() {
     var result = checkInput();
     if (result == 0) {
-        feedbackMessage.innerHTML = "CORRECT";
-    }
-    else {
-        feedbackMessage.innerHTML = "WRONG"; 
+        feedbackMessage.innerHTML = "Correct";
+        feedbackMessage.style.color = "#799466";
+
+
+    } else {
+        feedbackMessage.innerHTML = "Wrong, the correct answer is &laquo" + solution[counter] + "&raquo";
+        feedbackMessage.style.color = "#9F3B00";
     }
     feedbackMessage.style.visibility = "visible";
     checkButton.disabled = true; // har bare en sjangse til å checke
@@ -119,4 +125,5 @@ function checkFeedback() {
 checkButton.addEventListener("click", checkFeedback); 
 nextButton.addEventListener("click", nextFunc);
 //=========================================================
+
 

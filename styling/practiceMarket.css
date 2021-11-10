@@ -14,7 +14,7 @@
 
 .statusbar {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.8fr 1.2fr 1fr;
     margin: 24px 6px;
 } 
 
@@ -44,8 +44,9 @@
 #info-box {
     position: absolute;
     background-color: white;
-    padding: 20px;
-    font-size: 1vw;
+    padding: 17px;
+    font-size: 1.4vw;
+    font-weight: 350;
     width: 12vw;
     border-radius: 8px;
     box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.3);
@@ -74,3 +75,8 @@
     display: inline-block;
     cursor: pointer;
 }
+#instruction{
+padding-bottom: 2%;
+font-size: 15px;
+}
+
