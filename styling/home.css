@@ -33,10 +33,14 @@
     padding: 50px;
 }
 
+.flagSelection > div:nth-child(2n) {
+   filter: grayscale(100%);
+}
+
 #selectLanguage {
     height: 75px;
     vertical-align: middle;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .flagSelection {
