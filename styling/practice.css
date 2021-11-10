@@ -1,0 +1,56 @@
+.practice-section {
+    max-width: 85vw;
+    margin: 0 auto;
+}
+
+.screen-lg {
+    width: 85vw;
+}
+
+.relative {
+    position: relative;
+}
+
+.action-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .action-bar {
+        grid-template-columns: 1fr;
+    }
+}
+
+#info-box {
+    background-color: white;
+    padding: 20px;
+    font-size: 20px;
+    width: 12vw;
+    border-radius: 8px;
+    box-shadow: 1px 2px 0px 0px rgba(0,0,0,0.3);
+    position: absolute;
+    right: -25px;
+}
+
+#gameInstructions {
+    background-color: #D5754D ;
+    color: #ffede0;
+    font-weight: 800;
+    font-size: 4vw;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 45px;
+    height: 5vw;
+    width: 5vw;
+    border: none;
+    box-shadow: 1px 1px rgb(148, 148, 148);
+    right: 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
