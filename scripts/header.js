@@ -15,7 +15,7 @@ class Header extends HTMLElement {
           <li><a href="testHome.html" id="test">TEST</a></li>
           <li><a href="courses.html" id="courses">COURSES</a></li>
           <li><a href="about.html" id="about">ABOUT US</a></li>
-          <li><a href="home.html" id="en">EN ▼</a></li>
+          <li><a href="" id="en">EN ▼</a></li>
         </ul>
         
       </header>
