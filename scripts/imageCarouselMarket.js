@@ -25,7 +25,7 @@ function imageCarousel(){
     }
     else if(counterCarousel==imLength-1){
       prev.style.display = "none";
-      curr.style.display = "none";
+      curr.style.visibility = "hidden";
       next.style.display = "none";
        
     }
