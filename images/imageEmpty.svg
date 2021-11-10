@@ -4,6 +4,9 @@
 	 viewBox="0 0 681 303.4" style="enable-background:new 0 0 681 303.4;" xml:space="preserve">
 <style type="text/css">
 	.st0{opacity:0.8;fill:#E4F0F9;enable-background:new    ;}
+	.st1{opacity:0.5;fill:#417A9A;}
+	.st2{font-family:'Montserrat-Regular';}
+	.st3{font-size:30px;}
 </style>
 <g id="Background">
 	<path class="st0" d="M144.7,22.3c29.6-3.3,44.5,1.3,77.9-8.3c16.2-4.7,26.5-9.8,47.3-12.5c6.8-0.9,22.8-2.6,48.7,0
@@ -12,4 +15,5 @@
 		c-56.9-0.5-55.6-22.4-148.8-37.5c-32.7-5.3-54.8-6.1-83.4-22.2c-14.6-8.2-37.2-20.9-50.1-45.9C-10.9,154.2,3.4,100,32.1,68.2
 		C65.5,31.1,117.5,25.3,144.7,22.3z"/>
 </g>
+<text transform="matrix(1 0 0 1 215.7124 166.1828)" class="st1 st2 st3">COMING SOON</text>
 </svg>
