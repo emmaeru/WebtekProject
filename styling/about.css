@@ -1,31 +1,40 @@
-
-
 /* ABOUT TOP CONTAINER */
 .aboutTop {
+    max-width: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    row-gap: 1em;
+    padding-bottom: 3%;;
 }
 
 #aboutText {
     width: 50%;
 }
 
+#aboutImage {
+    width: 70%;
+}
+
 /* ABOUT BOTTOM CONTAINER */
 .aboutBottom {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
+    flex-wrap: wrap;
 
-    padding: 5%;
-    width: 90%;
-    gap: 5%;
+    padding: 4%;
+    width: 92%;
+    gap: 10%;
     background-color: var(--peach);
 }
 
+/* CONTACT INFO */
 #contactUs {
     color: var(--text);
+    width: 22em;
 }
 
 #contactInfo {
@@ -43,10 +52,36 @@
     justify-content: space-evenly;
 }
 
-/* CONTACT FORM INFILL */
-#contactDetails {
-    border: 0px solid;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 7.5px;
+/* CONTACT FORM */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTACT FORM INPUT FIELDS */
+.contactDetails {
+    border: 0em solid;
+    border-radius: 1em;
+    padding: 1.05em;
+    margin: 0.5em;
+}
+
+/* ALIGNS NAME AND EMAIL */
+.nameEmail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FOR TABLETS AND SMALL SCREENS */
+@media only screen and (max-width: 1035px){
+    #aboutImage {width: 110%;}
+}
+
+/* FOR MOBILE DEVICES */
+@media only screen and (max-width: 835px){
+    #aboutImage {width: 120%;}
 }

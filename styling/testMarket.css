@@ -1,1 +1,143 @@
+/* TEST-PAGE RELATED BUTTONS */
+#checkButton, #backAbout, #backCourses, #toTestMarket {
+    background-color: var(--peach);
+    color: var(--text);
+}
 
+#testMarketButton, #testKitchenButton {
+    background-color: var(--green);
+    color: var(--text);
+}
+
+#checkButton:hover,#backAbout:hover, #backCourses:hover, #toTestMarket:hover {
+    box-shadow: -0.25em -0.4em var(--peachShadow) inset;
+}
+
+#testMarketButton:hover, #testKitchenButton:hover {
+    box-shadow: -0.25em -0.4em var(--greenShadow) inset;
+}
+
+/* SCORE VIEW */
+#circle-list {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.4em;
+    margin: 1em 2.1em 0em 0em;
+}
+
+.circle {
+    width:20px;
+}
+
+/* TEST ROULETTE FUNCION */
+.carousel {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1% 5% 1% 5%;
+}
+
+/* CONTAINERS */
+.previous {
+    display: flex;
+    align-content: center;
+    background-color: var(--babyBlue);
+    border-radius: 20px;
+    filter: grayscale(100%);
+    margin: 3%;
+}
+
+.next {
+    display: flex;
+    align-content: center;
+    background-color: var(--babyBlue);
+    border-radius: 20px;
+    filter: grayscale(100%);
+    margin: 3%;
+}
+
+.current {
+    display: flex;
+    align-content: center;
+    background-color: white;
+    padding: 6%;
+    border-radius: 20px;
+}
+
+/* IMAGES */
+#previousImg {
+    margin: auto;
+    max-width: 35%;
+}
+
+#currentImg {
+    margin: auto;
+    max-width: 90%;
+}
+
+#nextImg {
+    margin: auto;
+    max-width: 35%;
+}
+
+/* TEST INPUT + BUTTONS */
+.testInput {
+    align-self: flex-end;
+    width: 60%;
+    gap: 15%;
+    padding-right: 7.5%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#marketInput {
+    border: 0em solid;
+    border-radius: 0.75em;
+    padding: 1.175em;
+    margin: 0.6em;
+}
+
+/* SCORE FEEDBACK */
+#finalScore {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 12em;
+    color: var(--dark);
+    margin: 0em;
+    text-align: center;
+
+    background-color: var(--babyBlue);
+    width: 96%;
+    padding: 2%;
+}
+
+/* WRITTEN FEEDBACK */
+#scoreMessage {color: var(--dark); font-size: 2em; width: 40%; margin: 2%;}
+
+/* REPEAT TEST AND MORE TESTS */
+.endButtons {
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+/* FOR TABLETS AND SMALL SCREENS */
+@media only screen and (max-width: 1035px){
+    .testInput {align-self: center; padding:0em; margin:0em;}
+}
+
+/* FOR MOBILE DEVICES */
+@media only screen and (max-width: 835px){
+    .next {display: none;}
+    .previous {display: none;}
+    .testInput {flex-direction: column;}
+    #checkButton {display: none;}
+}

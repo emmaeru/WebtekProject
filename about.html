@@ -8,7 +8,7 @@
         <title>About us</title>
 
         <link href="styling/style.css" rel="stylesheet" type="text/css" />
-	<link href="styling/about.css" rel="stylesheet" type="text/css" />
+	    <link href="styling/about.css" rel="stylesheet" type="text/css" />
         <script src="scripts/header.js" type="text/javascript" defer></script>
         <script src="scripts/footer.js" type="text/javascript" defer></script>
 
@@ -24,23 +24,23 @@
 
 				<h1 style="color: var(--red);">ABOUT US</h1>
 
-                <img src="images/aboutUs.png">
+                <img src="images/aboutUs.png" id="aboutImage">
 
-                <p id="aboutText" style="text-align: center;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
                     ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
                     in hendrerit in vulputate velit esse molestie consequat y nibh euismod  nit.</p>
 			</div>
 
-            <h2 style="margin-bottom: 5px;">CONTACT US</h2>
+            <h2>CONTACT US</h2>
 
 			<div class="aboutBottom">
 
                 <div id="contactUs">
                     
                     <p style="font-weight: 800;">
-                    Do you wish to learn more about Idiomas por<br>
-                    Idiotas, meet us or have a closer look?<br><br>
+                    Do you wish to learn more about Idiomas por
+                    Idiotas, meet us or have a closer look?
                     Contact us, we will set up a meeting!</p>
 
                     <div id="contactInfo">
@@ -49,8 +49,6 @@
                             <img src="images/mailIcon.svg" width="35">
                             <p>mail@outlook.com</p>
                         </div>
-
-                        <h3> hei </h3>
                         
                         <div id="Info">
                             <img src="images/phoneIcon.svg" width="35">
@@ -71,24 +69,21 @@
 
                 </div>
 
-                <div class="contactFormBox">
-
-                    <form action="messageSent.html" id="contactForm">
+                <form action="messageSent.html" class="contactForm">
+                    <div class="nameEmail">
                         <span>
-                            <input type="text" placeholder="Name"  id="contactDetails" class="formInput" required />
+                            <input type="text" placeholder="Name" class="contactDetails" required />
                         </span>
 
                         <span>
-                            <input type="email" placeholder="Email" id="contactDetails" class="formInput" required /> <!--pattern=".+@" title="must contain @"--> 
+                            <input type="email" placeholder="Email" class="contactDetails" required /> <!--pattern=".+@" title="must contain @"--> 
                         </span>
+                    </div>
+                    
+                    <textarea placeholder="Message" class="contactDetails" rows="9" cols="46" style="font-family: 'Roboto', sans-serif;" required></textarea>
 
-                        <div>
-                            <textarea placeholder="Message"  id="contactDetails" rows="9" cols="46" style="font-family: 'Roboto', sans-serif;" required></textarea>
-                        </div>
-
-                        <button type="submit" id="roundButton" style="width: 330px;">SUBMIT</button>
-                    </form>
-                </div>
+                    <button style="margin-top: 0.5em;" type="submit" id="roundButton">SUBMIT</button>
+                </form>
 
 			</div>
 

@@ -8,7 +8,7 @@
         <title>Courses</title>
 
         <link href="styling/style.css" rel="stylesheet" type="text/css" />
-	<link href="styling/courses.css" rel="stylesheet" type="text/css" />
+	    <link href="styling/courses.css" rel="stylesheet" type="text/css" />
         <script src="scripts/header.js" type="text/javascript" defer></script>
         <script src="scripts/footer.js" type="text/javascript" defer></script>
 
@@ -23,44 +23,45 @@
 			<div class="coursesTop">
 
                 <div class="coursesText">
+
                     <h1 style="text-align: left;">JOIN OUR PHYSICAL COURSES!</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
                         tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
-                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. 
-                    </p>
-                    <h2 style="text-align: left; font-size: 50px; margin: 60px 0px 5px 0px;">WHERE?</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
-                        diam nonummy nibh euismod tincidunt ut laoreet dolore nisl.
-                    </p>
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p><br>
 
-                    <h2 style="text-align: left; font-size: 50px; margin: 60px 0px 5px 0px;">WHEN?</h2>
+                    <h2 style="text-align: left; font-size: 3.5em;">WHERE?</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore nisl.</p>
 
                 </div>
 
-                <div id="SignUpCourse">
+                <div>
 
-                    <form action="SignUpComplete.html" id="courseform">
-                        <h3 class="form-title" style="font-size: 30px;">SIGN UP FOR<br>A COURSE</h3>
+                    <form action="SignUpComplete.html" id="SignUpCourse">
+                        <h3 class="form-title" style="font-size: 1.75em;">SIGN UP FOR<br>A COURSE</h3><br>
                         <div class="userdetails">
-                            <span class="formDetails" id="peronaliaTag">NAME</span>
+                            <span class="formDetails" id="peronaliaType">NAME</span>
                             <input type="text" name="name" id="personalia" required />
                         </div>
+
                         <div class="userdetails">
-                            <span class="formDetails" style="margin-left: 15px; color: var(--text); letter-spacing: 0.1em; color: var(--text);">EMAIL</span>
-                            <input type="text" name="email" id="personalia"required />
+                            <span class="formDetails" id="peronaliaType">EMAIL</span>
+                            <input type="text" name="email" id="personalia" required />
                         </div>
+
                         <div class="userdetails">
-                            <span class="formDetails" id="peronaliaTag">COURSE</span>
+                            <span class="formDetails" id="peronaliaType">COURSE</span>
                             <select name="selectType" id="personalia">
-                                <option value="intensive">Intensive (3 days)</option>
+                                <option value="intensive">Intensive (4 days)</option>
                                 <option value="regular">Regular (3 weeks)</option>
                             </select>
                         </div>
+
                         <div class="userdetails">
-                            <span class="formDetails" id="peronaliaTag">MONTH</span>
+                            <span class="formDetails" id="peronaliaType">MONTH</span>
                             <select name="selectType" id="personalia">
                                 <option value="september"> September </option>
                                 <option value="oktober"> October </option>
@@ -68,9 +69,8 @@
                                 <option value="desember"> December </option>
                             </select>
                         </div>
-                        <div class="courseButtonContainer">
-                            <button type="submit" id="roundButton">SUBMIT</button>
-                        </div>
+                        
+                        <button type="submit" id="roundButton">SUBMIT</button>
                     </form>
                 </div>
 
@@ -83,7 +83,7 @@
                     <p style="letter-spacing: 0.05em;"> En tekst om hvem det passer for og tidspunktene. </p>
                 </div>
 
-                <p style="font-weight: 900;">
+                <p style="font-weight: 600;">
                 &bullet; September<br>
                 &bullet; Oktober<br>
                 &bullet; November<br>

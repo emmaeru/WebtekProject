@@ -1,1 +1,14 @@
-
+/* TEST TYPES */
+.testType {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    padding: 2.5em 5em 2.5em 5em;
+    gap: 2em;
+    margin-bottom: 1.25em;
+    border-radius: 1.75em;
+    color: var(--text);
+}

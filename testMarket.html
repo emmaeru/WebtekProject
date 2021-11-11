@@ -8,7 +8,7 @@
         <title>Test market</title>
 
         <link href="styling/style.css" rel="stylesheet" type="text/css" />
-        <!--<link href="styling/testMarket.css" rel="stylesheet" type="text/css" />-->
+        <link href="styling/testMarket.css" rel="stylesheet" type="text/css" />
         <script src="scripts/header.js" type="text/javascript" defer></script>
         <script src="scripts/footer.js" type="text/javascript" defer></script>
 
@@ -20,13 +20,8 @@
 
         <main>
             
-            <div class="arenaTitle">
-                <h1 style="color: var(--green); flex:1;">MARKET TEST</h1>
-                <img src="images/spanish.svg" style="width:37px;"> <!--SPANISH FLAG-->
-            </div>
+            <h1>MARKET TEST</h1>
 
-            <h2 id="finalScore" style="display:none;" class="afterTest"></h2>
-            <h3 id="scoreMessage" style="display:none;" class="afterTest"></h3>
             <div id="circle-bar">
                 <ul id="circle-list" style="list-style:none; ">
                     <li> <img src="images/blueCircle.png" class="circle" id="circle1" /> </li>
@@ -41,6 +36,7 @@
                     <li> <img src="images/whiteCircle.png" class="circle" id="circle10" /> </li>
                 </ul>
             </div>
+            <h2 id="feedbackMessage" style="visibility:hidden;"></h2>
 
             <div class="carousel">
                 <div class="previous"><img src="images/iconBlue.png" id="previousImg"/></div>
@@ -48,7 +44,7 @@
                 <div class="next"><img src="images/iconBanana.png" id="nextImg"/></div>
             </div>
 
-            <div class="arenaTitle" style="align-self: flex-end; margin-right: 4%;">
+            <div class="testInput">
                 <!--Inputfieldet for å avgi svar, laget i en form.-->
                 <div id="markedAnswer">
                     <form>
@@ -62,14 +58,17 @@
                 <!-- Går til neste ord, skifter bilde-->
                 <button id="nextButton" class="squareButton" style="background-color: var(--text); color: var(--dark);"> NEXT &longrightarrow; </button>
             </div>
+            
+            <h0 id="finalScore" style="display:none;" class="afterTest"></h0>
+            <h1 id="scoreMessage" style="display:none;" class="afterTest"></h1>
 
-            <h3 id="feedbackMessage" style="visibility:hidden"></h3>
+            <div class="endButtons">
+                <!-- Får siden til å refreshe-->
+                <button id="repeatButton" class="squareButton" style="display:none; " onClick="history.go(0)" > REPEAT TEST </button>
 
-            <!-- Får siden til å refreshe-->
-            <button id="repeatButton" class="squareButton" style="display:none; " onClick="history.go(0)" > REPEAT TEST </button>
-
-            <!-- Linker til testHome.html-->
-            <button id="moretestsButton" class="squareButton" style="display:none; " onclick="location.href = 'testHome.html';"> MORE TESTS &longrightarrow; </button>
+                <!-- Linker til testHome.html-->
+                <button id="moretestsButton" class="squareButton" style="display:none; " onclick="location.href = 'testHome.html';"> MORE TESTS &longrightarrow; </button>
+            </div>
 
         </main>
 

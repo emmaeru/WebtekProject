@@ -1,7 +1,7 @@
 //=== Her ligger fasiten og de engelske ordene 
-const solution = ["huevo", "platano", "gallina", "zanahoria", "vendedor", "pan", "dinero", "pescado", "manzana", "perro"];
-const english = ["egg", "banana", "hen", "carrot", "vendor", "bread", "money", "fish", "apple", "dog"];
-const scoreMessages = ["YOU SHOULD PRACTICE MORE","GOOD","AWESOME!"]
+const solution = ["huevo", "platano", "pollo", "zanahoria", "vendedor", "pan", "dinero", "pez", "manzana", "perro"];
+const english = ["egg", "banana", "chicken", "carrot", "vendor", "bread", "money", "fish", "apple", "dog"];
+const scoreMessages = ["YOU SHOULD PRACTICE MORE!","GOOD!","AWESOME!"]
 
 // Listen under gir ID-ene til alle sirklene, skal spørre studass om tips til hvordan ikke bruke den, men nå funker det hvertfall
 const circlestr = ["circle1", "circle2", "circle3", "circle4", "circle5", "circle6", "circle7", "circle8", "circle9", "circle10"]
@@ -20,7 +20,7 @@ let scoreMessage = document.getElementById("scoreMessage");
 let finalScore = document.getElementById("finalScore");
 let feedbackMessage = document.getElementById("feedbackMessage");
 
-input.placeholder = english[0] + "...";
+input.placeholder = english[counter] + " in spanish..";
 
 // Fire funksjoner som skal brukes i nextFunc og checkFeedback, funksjonene som kalles når man trykker på henholdsvis "nextButton" og "checkButton"
 
@@ -39,7 +39,7 @@ function nextDisplay() {
     circleID = circlestr[counter];
     document.getElementById(circleID).src = "images/blueCircle.png"; // Skifter farge p� sirklene mens vi forflytter oss
     document.getElementById("marketInput").value = ""; // Gj�r feltet tomt slik at det er klart for ny input, trengs det med placeholder?
-    input.placeholder = english[counter] + "...";    // legger det engelske ordet inn i placeholder
+    input.placeholder = english[counter] + " in spanish..";    // legger det engelske ordet inn i placeholder
 }
 
 // Nr 3:Regner ut og printer score + endrer fargene i sirklene etter hvilke spørsmål som var riktige/feil
@@ -100,7 +100,7 @@ function nextFunc() {
         afterTestDisplay();    
     }          
     if (counter == (solution.length - 1))
-        nextButton.innerHTML = "SEE YOUR SCORE";
+        nextButton.innerHTML = "SCORE&longrightarrow;";
 }
 
 
@@ -108,12 +108,12 @@ function nextFunc() {
 function checkFeedback() {
     var result = checkInput();
     if (result == 0) {
-        feedbackMessage.innerHTML = "Correct";
+        feedbackMessage.innerHTML = "Correct!";
         feedbackMessage.style.color = "#799466";
 
 
     } else {
-        feedbackMessage.innerHTML = "Wrong, the correct answer is &laquo" + solution[counter] + "&raquo";
+        feedbackMessage.innerHTML = "Wrong. Try &laquo" + solution[counter] + "&raquo" + " next time!";
         feedbackMessage.style.color = "#9F3B00";
     }
     feedbackMessage.style.visibility = "visible";

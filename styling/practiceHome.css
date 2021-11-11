@@ -1,25 +1,40 @@
-
+/* PRACTICE TITLE */
 .arenaTitle {
     width: 60%;
-    flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    margin: 0em;
+    padding: 0em;
 }
 
+/* ARENA CONTAINER */
 .selectArena {
-    flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-content: flex-end;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    max-width: 80%;
+    gap: 5em;
+    row-gap: 4em;
+    padding: 3% 0% 3% 0%;
 }
 
-.arenaSelect {
-    flex: 1;
+/* ARENAS TO SELECT */
+.arena {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-width: 25em;
+}
+
+/* FOR TABLETS AND SMALL SCREENS */
+@media only screen and (max-width: 1035px){
+}
+
+/* FOR MOBILE DEVICES */
+@media only screen and (max-width: 835px){
 }
