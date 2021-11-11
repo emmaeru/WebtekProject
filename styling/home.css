@@ -34,7 +34,7 @@
 }
 
 #selectLanguage {
-    text-decoration: underline;
+    text-decoration: none; /*fjerner underline på select language*/
 }
 
 .flagSelection {
