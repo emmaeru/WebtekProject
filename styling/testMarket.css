@@ -1,22 +1,3 @@
-/* TEST-PAGE RELATED BUTTONS */
-#checkButton, #backAbout, #backCourses, #toTestMarket {
-    background-color: var(--peach);
-    color: var(--text);
-}
-
-#testMarketButton, #testKitchenButton {
-    background-color: var(--green);
-    color: var(--text);
-}
-
-#checkButton:hover,#backAbout:hover, #backCourses:hover, #toTestMarket:hover {
-    box-shadow: -0.25em -0.4em var(--peachShadow) inset;
-}
-
-#testMarketButton:hover, #testKitchenButton:hover {
-    box-shadow: -0.25em -0.4em var(--greenShadow) inset;
-}
-
 /* SCORE VIEW */
 #circle-list {
     width: 40%;
