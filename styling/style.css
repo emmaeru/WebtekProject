@@ -53,27 +53,6 @@ main {
     padding: 8% 0% 2% 0%;
 }
 
-/* NAVBAR CONTAINER 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1% 3% 1% 1%;
-
-    font-size: 0.95em;
-    font-weight: 600;
-    letter-spacing: 0.175em;
-}
-*/
-
-/* NAVBAR
-header ul {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-*/
 
 /* LOGO */
 .Logo {
@@ -198,48 +177,25 @@ a:hover, a:active {
 
 /*HEADER & NAVBAR*/
 
-
-/* NAVBAR ADDS */
-li {
-    list-style-type: none;
-    align-items: center;
-}
-
-body.hidden-scrolling{
-	overflow-y: hidden;
-}
-
-*{
-	margin:0;
-	box-sizing: border-box;
-}
-
-ul{
-	list-style: none;
-	margin:0;
-	padding:0;
-}
-
-
-/*NEW NAVBAR*/
 .header{
 	position: absolute;
 	width: 100%;
 	left:0;
 	top:0;
-	z-index: 99;
-	padding: 15px;
+	padding: 0.9375em;
 }
+
 .mainHeader{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-    letter-spacing: 1.2px; 
+    letter-spacing: 0.075em; 
 }
+
 /*navbar*/
 .header .navbar > .menuElement{
 	display: inline-block;
-	margin-left: 30px;
+	margin-left: 1.875em;
 	position: relative;
 }
 
@@ -247,7 +203,7 @@ ul{
 /*element in navbar*/
 .header .navbar > .menuElement > a{
 	display: block;
-	font-size: 16px;
+	font-size: 1em;
 	color: var(--dark);
 }
 /*hover over element in navbar*/
@@ -260,7 +216,7 @@ ul{
 
 /*dropdown*/
 .header .navbar > .menuElement > .dropdownList{
-	width: 110px;	
+	width: 6.875em;	
 	position: absolute;
 	left: 0; /*align with navbar element*/
 	top:100%;
@@ -283,14 +239,14 @@ ul{
 .header .navbar > .menuElement > .dropdownList > .menuElement > a{
 	display: block;
     color: var(--yellow);
-	padding: 5px 10px 5px 10px;
+	padding: 0.3125em 0.625em 0.3125em 0.625em;
 }
 
 
 .header .openMenu{
-	height: 34px;
-	width: 40px;
-	margin-right: 15px;
+	height: 2.125em;
+	width: 2.5em;
+	margin-right: 0.9375em;
 	display: none;
 	align-items: center;
 	justify-content: center;
@@ -314,8 +270,8 @@ ul{
 /*burger icon*/
 .header .openMenu span{
 	display: block;
-	height: 3px;
-	width: 26px;
+	height: 0.1875em;
+	width: 1.625em;
 	background-color: var(--dark);
     position: relative;}
 .header .openMenu span:before,
@@ -328,15 +284,15 @@ ul{
 	height: 100%;
 	box-sizing: border-box;}
 .header .openMenu span:before{
-	top:-7px;}
+	top:-0.4375em;}
 .header .openMenu span:after{
-	top:7px;}
+	top:0.4375em;}
 
 /*close-cross in burger menu*/
 .header .closeMenu{
-	height: 40px;
-	width: 40px;
-	margin:0 0 15px 15px;
+	height: 2.5em;
+	width: 2.5em;
+	margin:0 0 0.9375em 0.9375em;
 	display: none;
 	align-items: center;
 	justify-content: center;
@@ -345,15 +301,15 @@ ul{
 
 
 /*for normal (big) screens*/
-@media(min-width: 785px){
+@media(min-width: 49.0625em){
 .header .navbar > .dropdown:hover > .dropdownList{
 	opacity: 1;
 	visibility: visible;
  }
 }
 
-/* for small screens */
-@media(max-width: 785px){  /*785px  instead of 600px so that changed to burger instead of second line with navbar content*/
+/* for small screens: burger */
+@media(max-width: 49.0625em){  /*785px (49.0625em)  instead of 600px so that changed to burger instead of second line with navbar content*/
 	
 	.header .navbarOverlay.active{ /*show sidebar(burger)*/
 	visibility: visible;
@@ -361,44 +317,44 @@ ul{
 }
 	.header .menu{
 		position: fixed;
-		right: -280px;
+		right: -17.5em;
 		visibility: hidden;
-		width: 280px;
+		width: 17.5em;
 		height: 100%;
 		top:0;
 		overflow-y: auto;
 	    background-color: var(--peach);
 		z-index: 1000;
-		padding: 15px 0;
+		padding: 0.9375em 0;
 	}
 
 	.header .menu.open{
 		visibility: visible;
-		right: 0px;  /*rightside menu*/
+		right: 0;  /* menu is on the right hand side*/
 	}
 	
 	.header .navbar > .menuElement{ /*arrange elements*/
 		display: block;
-		margin:0;
+        margin-left: 0.625em;
+        align-self: left;
 	}
 
 	.header .navbar > .dropdown > a{
 		display: flex;
 		justify-content: space-between;
-		align-items: left;
 	}
 
 	.header .navbar > .menuElement > a{ /*list of elements inside burger menu*/
 		color: var(--yellow);
-		padding: 10px;
-		text-align: left;
+		padding: 0.625em;
+        text-align: left;
 
 	}
 
 	/*dropdown inside burgerstylemenu*/
 	.header .navbar > .menuElement > .dropdownList{
 		position: relative;
-		text-align: left;
+        text-align: left;
 		opacity: 1; /*if not text invisible*/
 		visibility: visible;
 		max-height: 0;
@@ -414,7 +370,26 @@ ul{
 	}
 }
 
+/* NAVBAR ADDS */
+li {
+    list-style-type: none;
+    align-items: center;
+}
 
+body.hidden-scrolling{
+	overflow-y: hidden;
+}
+
+*{
+	margin:0;
+	box-sizing: border-box;
+}
+
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
 
 
 
