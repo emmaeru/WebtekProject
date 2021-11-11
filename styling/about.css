@@ -1,3 +1,7 @@
+h1,h2,h3,h4 {
+    color: var(--red);
+}
+
 /* ABOUT TOP CONTAINER */
 .aboutTop {
     max-width: 55%;
@@ -10,7 +14,8 @@
 }
 
 #aboutText {
-    width: 50%;
+    width: auto;
+    padding: 25%;
 }
 
 #aboutImage {
@@ -21,12 +26,12 @@
 .aboutBottom {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 
     padding: 4%;
-    width: 92%;
+    width: 100%;
     gap: 10%;
     background-color: var(--peach);
 }

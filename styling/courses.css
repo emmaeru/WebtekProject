@@ -1,3 +1,7 @@
+h1,h2,h3,h4 {
+    text-align: left;
+}
+
 /* COURSES TOP CONTAINER */
 .coursesTop {
     letter-spacing: 0.05em;
@@ -48,7 +52,7 @@
 
 /* COURSE TYPE CONTAINERS */
 .courseType {
-    width: 55%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -63,7 +67,13 @@
 }
 
 /* FOR TABLETS AND SMALL SCREENS */
-@media only screen and (max-width: 1035px){
+@media only screen and (max-width: 1072px){
+    .coursesTop {justify-content: center;}
+    .coursesText {text-align: center;}
+    h1,h2,h3,h4 {text-align: center;}
+    #signUpCourse {padding: 2em; margin: auto;}
+    .courseType {width: auto; margin: 0em 2em 2em 2em;}
+
 }
 
 /* FOR MOBILE DEVICES */

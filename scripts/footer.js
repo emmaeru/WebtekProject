@@ -1,3 +1,5 @@
+/* GENERATES THE HTML OF REUSABLE FOOTER ELEMENT */
+
 class Footer extends HTMLElement {
   constructor() {
     super();

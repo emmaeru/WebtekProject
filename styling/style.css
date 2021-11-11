@@ -7,6 +7,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 0.875em;
 
+    width: 100%;
+    height: 100%;
     margin: 0em;
     padding: 0em;
 }
@@ -34,6 +36,7 @@ body {
 p {
     font-weight: 500;
     line-height: 2em;
+    letter-spacing: 0.05em;
     margin: 0em 0em 1em 0em;
 }
 
@@ -50,6 +53,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 0;
     padding: 8% 0% 2% 0%;
 }
 
@@ -300,10 +305,8 @@ a:hover, a:active {
 	justify-content: center;
 }
 
-
-
 /*for normal (big) screens*/
-@media(min-width: 49.0625em){
+@media only screen and (min-width: 785px){
 .header .navbar > .dropdown:hover > .dropdownList{
 	opacity: 1;
 	visibility: visible;
@@ -311,12 +314,17 @@ a:hover, a:active {
 }
 
 /* for small screens: burger */
-@media(max-width: 49.0625em){  /*785px (49.0625em)  instead of 600px so that changed to burger instead of second line with navbar content*/
-	
-	.header .navbarOverlay.active{ /*show sidebar(burger)*/
+@media only screen and (max-width: 785px){  /* instead of 600px so that changed to burger instead of second line with navbar content*/
+
+    main {
+        padding-top: 5em;
+    }
+
+    .header .navbarOverlay.active{ /*show sidebar(burger)*/
 	visibility: visible;
 	opacity: 1;
-}
+    }
+
 	.header .menu{
 		position: fixed;
 		right: -17.5em;
@@ -397,15 +405,15 @@ ul{
 
 /* FOOTER */
 footer {
-    align-self: flex-end;
-    flex: 1;
+    /*align-self: baseline;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     gap: 5%;
-    padding: 2% 2% 0.5% 2%;
+    padding: 2% 2% 0% 2%;
 }
+
 
 .contactInfo {
     display: flex;
@@ -470,14 +478,4 @@ footer {
     align-items: baseline;
     margin: 0em;
     padding: 0em;
-}
-
-/* FOR TABLETS AND SMALL SCREENS */
-@media only screen and (max-width: 1035px){
-}
-
-/* FOR MOBILE DEVICES */
-@media only screen and (max-width: 835px){
-    header ul {flex-direction: column; flex:0; text-align: right; margin-bottom:0em;}
-    footer {margin-top: 7.5em;}
 }

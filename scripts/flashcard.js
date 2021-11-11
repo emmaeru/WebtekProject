@@ -1,3 +1,5 @@
+/* CREATES AND DISPLAYS FLASHCARDS WITH TRANSLATED NOUNS IN PRACTICE GAMIFICATION */
+
 let textBox = null;
 let text = null;
 let titleText = null;
@@ -14,7 +16,7 @@ const app = document.getElementById('app');
 
 function createTextBox() {
         
-    if(textBox !== null) {               //hvis den eksisterer skal den ikke gjøre noe
+    if(textBox !== null) {  // IF THE TEXTBOX ALREADY EXISTS, DO NOTHING
         return;
     }
 
@@ -29,7 +31,7 @@ function createTextBox() {
     textBox.style.boxShadow = "1px 2px 0px 0px rgba(0,0,0,0.3)";
     textBox.style.borderRadius = "6px"
 
-    // Add text
+    // ADDS TEXT FO TEXTBOX
     titleText = document.createElement("p")
     titleText.style.textAlign = "center";
     titleText.style.fontWeight = 600;
@@ -55,14 +57,15 @@ function createTextBox() {
     speakerBtn.width = 15;
     speakerBtn.height = 15;
 
-    textBox.style.display = "none"; // Ikke vis tekstboks
+    textBox.style.display = "none"; // HIDE TEXTBOX
 
     textBox.style.transition = 'all 1s ease-out';
 
     textBox.appendChild(speakerBtn);
 
+    // UPDATES THE POSITION OF THE TEXTBOX WHEN VIEWPORT DIMENSIONS CHANGE
     app.appendChild(textBox);
-    window.addEventListener("resize", updateTextboxPosition);          //når vindustrørelsen endrer seg, oppdater posisjon på textbox size, lager funksjonen updateTextboxPosition
+    window.addEventListener("resize", updateTextboxPosition);
 }
 
 function enableTextBox(enable) {
@@ -70,7 +73,7 @@ function enableTextBox(enable) {
         return;
     }
 
-    // Vis eller ikke vis textboksen
+    // DECIDES WHEN THE FLASHCARD / TEXTBOX IS VISIBLE AND NOT
     textBox.style.display = enable ? "block" : "none";
 
     const { title = '', subtitle = ''} = selectedOptions;

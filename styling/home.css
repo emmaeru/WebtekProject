@@ -1,18 +1,17 @@
 /* HOME TOP CONTAINER */
 .homeTop {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2.5em;
-    padding-bottom: 0% 5% 5% 5%;
+    padding: 0% 5% 5% 5%;
 }
 
 .homeText {
-    flex-grow:1;
-    flex-shrink: 1;
-    width: 35em;
+    width: 40em;
     text-align: center;
     padding: 0em 5em 0em 5em;
 }
@@ -82,7 +81,8 @@
 }
 
 /* FOR TABLETS AND SMALL SCREENS */
-@media only screen and (max-width: 1035px){
+@media only screen and (max-width: 500px){
+    .homeText {width: 90%; margin: auto;}
 }
 
 /* FOR MOBILE DEVICES */
