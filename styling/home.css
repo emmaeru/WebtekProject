@@ -33,6 +33,10 @@
     row-gap: 3em;
 }
 
+.flagSelection > div:nth-child(2n) {
+   filter: grayscale(100%);
+}
+
 #selectLanguage {
     text-decoration: underline;
 }

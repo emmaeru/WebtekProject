@@ -1,3 +1,4 @@
+let imageEmbed = null;
 let textBox = null;
 let text = null;
 let titleText = null;
@@ -96,9 +97,10 @@ function enableTextBox(enable) {
 }
 
 function setTextBoxPosition(position, textBoxPosition, options) {
+    const imagePosition = imageEmbed.getBoundingClientRect();
 
-    textBox.style.top = (position.top - (textBoxPosition.height || position.height)) + "px";       //
-    textBox.style.left = (position.left) + "px";
+    textBox.style.top = (position.top + imagePosition.top - (textBoxPosition.height || position.height)) + "px";       //
+    textBox.style.left = (position.left + imagePosition.left) + "px";
 }
 
 function updateTextboxPosition() {                      
@@ -108,7 +110,6 @@ function updateTextboxPosition() {
 
     let position = selectedElement.getBoundingClientRect();                     // henter element
     let positionTextBox = textBox.getBoundingClientRect();
-
 
     setTextBoxPosition(position, positionTextBox, selectedOptions);
 }                                  
@@ -138,32 +139,12 @@ function updateCounterText() {
     }
 }
 
-
-function getImageFromFile() {
-    return fetch('images/image.svg', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'image/svg+xml'
-        }
-    }).then((res) => {
-        return res.text()
-    })
-    .then((imageText) => {
-       const elem = document.getElementById("app");
-       
-       const imageElement = document.createElement("image");
-       imageElement.innerHTML = imageText;
-
-       elem.appendChild(imageElement);
-    })
-}
-
 function addHoverEffectToElement(nameId, options) {
     const {scale = 2, tx = -25, ty = -75, speed = 3, title = "HELLO :D", subtitle = "Its me, mario! :D", bx = '', by = '', audio = undefined} = options;
 
     totalObjects += 1;
     
-    const element = document.getElementById(nameId)
+    const element = imageEmbed.getSVGDocument().getElementById(nameId);
 
     element.addEventListener('mousedown', function() {
 
@@ -195,8 +176,8 @@ function addOverflowVisible(nameId) {
 }
 
 // Hvert av elementene har unike koordinater pga de hentes fra ulike id i svg-filen
-getImageFromFile()
-.then(() => {
+imageEmbed = document.getElementById('imageMarket');
+imageEmbed.addEventListener('load', () => {
 
     addHoverEffectToElement('Dog', {
         scale: 1.5,
@@ -246,7 +227,7 @@ getImageFromFile()
         title: 'PLATANO',
         subtitle: 'banana',
     });
-/*    addHoverEffectToElement('Meat', {
+    /*    addHoverEffectToElement('Meat', {
         scale: 2, 
         tx: -72, 
         ty: -72, 
@@ -300,13 +281,11 @@ getImageFromFile()
 
     });
 
-    addOverflowVisible("image");
+    addOverflowVisible("imageMarket");
 
     createTextBox();
 
     updateCounterText()
 
-})
 
-
-
+});
