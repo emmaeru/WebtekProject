@@ -189,13 +189,15 @@ a:hover, a:active {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-    letter-spacing: 0.075em; 
+    font-weight: 600;
+    letter-spacing: 0.075em;
+    padding-right: 2em;
 }
 
 /*navbar*/
 .header .navbar > .menuElement{
 	display: inline-block;
-	margin-left: 1.875em;
+	margin-left: 5em;
 	position: relative;
 }
 
