@@ -391,11 +391,14 @@ ul{
 	.header .navbar > .menuElement > a{ /*list of elements inside burger menu*/
 		color: var(--yellow);
 		padding: 10px;
+		text-align: left;
+
 	}
 
 	/*dropdown inside burgerstylemenu*/
 	.header .navbar > .menuElement > .dropdownList{
 		position: relative;
+		text-align: left;
 		opacity: 1; /*if not text invisible*/
 		visibility: visible;
 		max-height: 0;
