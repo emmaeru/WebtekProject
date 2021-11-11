@@ -29,12 +29,12 @@
 }
 
 /*Counter in market.js*/
-#counter{
-    color: white;
+#counter {
+    color: var(--green);
     bottom: -30px;
     right: 50%;
     text-align: center;
-    font-size: 60px;
+    font-size: 4em;
     font-weight: 800;
     margin: auto;
     /*text-shadow: 2px 2px 8px #D5754D; */
@@ -79,4 +79,25 @@
 padding-bottom: 2%;
 font-size: 15px;
 }
+/* SQUARE BUTTON */
+.squareButton {
+    cursor:pointer; 
+    background-color: var(--text);
+    border: 0em solid;
+    border-radius: 0.6em;
+
+    color: var(--dark);
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+
+    padding: 0.9em 2.5em 0.9em 3em;
+}
+
+.squareButton:hover {
+    box-shadow: -0.25em -0.4em var(--lightShadow) inset;
+}
+
+
 

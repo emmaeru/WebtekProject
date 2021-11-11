@@ -1,5 +1,6 @@
 /* PRACTICE TITLE */
 .arenaTitle {
+    align-self: top;
     width: 60%;
     display: flex;
     flex-direction: row;

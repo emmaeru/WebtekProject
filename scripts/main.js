@@ -135,7 +135,7 @@ function updateCounterText() {
 
     // Hvis man har trykket på alle objektene, vis "finish" knappen 
     if(countSeen >= totalObjects) {
-        document.getElementById('toTestMarket').style.display = "block";
+        document.getElementById('toTestMarket').style.display = "inline";
     }
 }
 
