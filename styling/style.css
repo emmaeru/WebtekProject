@@ -158,26 +158,53 @@ a:hover, a:active {
 }
 
 /* TEST-PAGE RELATED BUTTONS */
-#checkButton, #backAbout, #backCourses, #toTestMarket {
+.checkButton, #backAbout, #backCourses, #toTestMarket {
     background-color: var(--peach);
     color: var(--text);
 }
 
-#testMarketButton, #testKitchenButton {
+.testMarketButton, #testKitchenButton {
     background-color: var(--green);
     color: var(--text);
 }
 
-#checkButton:hover,#backAbout:hover, #backCourses:hover, #toTestMarket:hover {
+.checkButton:hover,#backAbout:hover, #backCourses:hover, #toTestMarket:hover {
     box-shadow: -0.25em -0.4em var(--peachShadow) inset;
 }
 
-#testMarketButton:hover, #testKitchenButton:hover {
+.testMarketButton:hover, #testKitchenButton:hover {
     box-shadow: -0.25em -0.4em var(--greenShadow) inset;
 }
 
+.checkButton {
+    cursor:pointer; 
+    background-color: var(--peach);
+    border: 0em solid;
+    border-radius: 0.6em;
 
+    color: var(--text);
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
 
+    padding: 0.9em 2.5em 0.9em 3em;
+}
+
+.testMarketButton {
+    cursor:pointer; 
+    background-color: var(--green);
+    border: 0em solid;
+    border-radius: 0.6em;
+
+    color: var(--text);
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+
+    padding: 0.9em 2.5em 0.9em 3em;
+}
 
 
 /*HEADER & NAVBAR*/

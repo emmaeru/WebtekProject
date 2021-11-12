@@ -1,3 +1,5 @@
+/* CREATES AND DISPLAYS FLASHCARDS WITH TRANSLATED NOUNS IN PRACTICE GAMIFICATION */
+
 let imageEmbed = null;
 let textBox = null;
 let text = null;
@@ -15,7 +17,7 @@ const app = document.getElementById('app');
 
 function createTextBox() {
         
-    if(textBox !== null) {               //hvis den eksisterer skal den ikke gjøre noe
+    if(textBox !== null) { // IF THE TEXTBOX ALREADY EXISTS, DO NOTHING
         return;
     }
 
@@ -30,7 +32,7 @@ function createTextBox() {
     textBox.style.boxShadow = "1px 2px 0px 0px rgba(0,0,0,0.3)";
     textBox.style.borderRadius = "6px"
 
-    // Add text
+    // ADDS TEXT FO TEXTBOX
     titleText = document.createElement("p")
     titleText.style.textAlign = "center";
     titleText.style.fontWeight = 600;
@@ -57,14 +59,15 @@ function createTextBox() {
     speakerBtn.width = 10;
     speakerBtn.height = 10;
 
-    textBox.style.display = "none"; // Ikke vis tekstboks
+    textBox.style.display = "none";  // HIDE TEXTBOX
 
     textBox.style.transition = 'all 1s ease-out';
 
     textBox.appendChild(speakerBtn);
 
+    // UPDATES THE POSITION OF THE TEXTBOX WHEN VIEWPORT DIMENSIONS CHANGE
     app.appendChild(textBox);
-    window.addEventListener("resize", updateTextboxPosition);          //når vindustrørelsen endrer seg, oppdater posisjon på textbox size, lager funksjonen updateTextboxPosition
+    window.addEventListener("resize", updateTextboxPosition);
 }
 
 function enableTextBox(enable) {
@@ -72,7 +75,7 @@ function enableTextBox(enable) {
         return;
     }
 
-    // Vis eller ikke vis textboksen
+    // DECIDES WHEN THE FLASHCARD / TEXTBOX IS VISIBLE AND NOT
     textBox.style.display = enable ? "block" : "none";
 
     const { title = '', subtitle = ''} = selectedOptions;
@@ -99,16 +102,16 @@ function enableTextBox(enable) {
 function setTextBoxPosition(position, textBoxPosition, options) {
     const imagePosition = imageEmbed.getBoundingClientRect();
 
-    textBox.style.top = (position.top + imagePosition.top - (textBoxPosition.height || position.height)) + "px";       //
+    textBox.style.top = (position.top + imagePosition.top - (textBoxPosition.height || position.height)) + "px";
     textBox.style.left = (position.left + imagePosition.left) + "px";
 }
 
 function updateTextboxPosition() {                      
-    if(textBox === null || selectedElement === null) {                          //forhindrer at den krasjer, safty sjekk
+    if(textBox === null || selectedElement === null) {                          // SAFETY CHECK
         return;
     }
 
-    let position = selectedElement.getBoundingClientRect();                     // henter element
+    let position = selectedElement.getBoundingClientRect();                     // FETCH ELEMENT
     let positionTextBox = textBox.getBoundingClientRect();
 
     setTextBoxPosition(position, positionTextBox, selectedOptions);
@@ -119,7 +122,7 @@ function removeTextBoxOnClick(event) {
         return;
     }
     
-    // Hvis jeg trykker utenfor boksen, display = none
+    // IF CLICKED OUTSIDE BOX, DISPLAY: NONE
     let didIClickInsideBox = textBox.contains(event.target);
     if(!didIClickInsideBox) {
         enableTextBox(false);
@@ -133,7 +136,7 @@ function updateCounterText() {
 
     counterTextElemenet.innerText = `${countSeen}/${totalObjects}`;
 
-    // Hvis man har trykket på alle objektene, vis "finish" knappen 
+    // WHEN ALL OBJECTS HAVE BEEN CLICKED, DISPLAY TEST-BUTTON
     if(countSeen >= totalObjects) {
         document.getElementById('toTestMarket').style.display = "block";
     }
@@ -148,7 +151,7 @@ function addHoverEffectToElement(nameId, options) {
 
     element.addEventListener('mousedown', function() {
 
-        seenObjects[nameId] = true;     //nameid er sett
+        seenObjects[nameId] = true;     // NAMEID HAS BEEN DISPLAYED
         selectedElement = element;
         selectedOptions = options;
         updateCounterText();
@@ -175,7 +178,7 @@ function addOverflowVisible(nameId) {
     element.style = "overflow: visible";
 }
 
-// Hvert av elementene har unike koordinater pga de hentes fra ulike id i svg-filen
+// EACH ELEMENT HAS UNIQUE COORDINATES AS THEY ARE FETCHED FROM DIFFERENT IDS IN SVG-FILE
 imageEmbed = document.getElementById('imageMarket');
 imageEmbed.addEventListener('load', () => {
 
@@ -188,7 +191,7 @@ imageEmbed.addEventListener('load', () => {
         subtitle: 'dog',
         by: -400,
         bx: -30,
-        // audio: 'sounds/Perro.mp3'
+        
     });
     addHoverEffectToElement('Chicken', {
         scale: 1.5, 
@@ -227,12 +230,7 @@ imageEmbed.addEventListener('load', () => {
         title: 'PLATANO',
         subtitle: 'banana',
     });
-    /*    addHoverEffectToElement('Meat', {
-        scale: 2, 
-        tx: -72, 
-        ty: -72, 
-        speed:  0.5
-    }); */
+    
     addHoverEffectToElement('Fish', {
         scale: 2, 
         tx: -64, 

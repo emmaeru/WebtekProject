@@ -34,7 +34,7 @@ h1,h2,h3,h4 {
 }
 
 /* SINGUP FORM INPUT FIELDS */
-#personalia {
+.personalia {
     letter-spacing: 0.1em;
     border: 0em solid;
     border-radius: 30em;
@@ -44,7 +44,7 @@ h1,h2,h3,h4 {
 }
 
 /* INPUT FIELD NAME */
-#peronaliaType {
+.personaliaType {
     margin-left: 1em;
     color: var(--text);
     letter-spacing: 0.1em;

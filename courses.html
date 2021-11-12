@@ -32,7 +32,7 @@
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
                         tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p><br>
 
-                    <h1 style="color: var(--red);">WHERE?</h2>
+                    <h1 style="color: var(--red);">WHERE?</h1>
 
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
                     diam nonummy nibh euismod tincidunt ut laoreet dolore nisl.</p>
@@ -44,26 +44,26 @@
                     <form action="SignUpComplete.html" id="SignUpCourse">
                         <h3 class="form-title" style="font-size: 1.75em;">SIGN UP FOR<br>A COURSE</h3><br>
                         <div class="userdetails">
-                            <span class="formDetails" id="peronaliaType">NAME</span>
-                            <input type="text" name="name" id="personalia" required />
+                            <span class="personaliaType">NAME</span>
+                            <input type="text" name="name" class="personalia" required />
                         </div>
 
                         <div class="userdetails">
-                            <span class="formDetails" style="margin-left: 15px; color: var(--text); letter-spacing: 0.1em; color: var(--text);">EMAIL</span>
-                            <input type="text" name="email" id="personalia" pattern=".+@" title="Email must contain @" required>
+                            <span style="margin-left: 15px; color: var(--text); letter-spacing: 0.1em; color: var(--text);">EMAIL</span>
+                            <input type="text" name="email" class="personalia" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Email must contain @" required>
                         </div>
 
                         <div class="userdetails">
-                            <span class="formDetails" id="peronaliaType">COURSE</span>
-                            <select name="selectType" id="personalia">
+                            <span class="personaliaType">COURSE</span>
+                            <select name="selectType" class="personalia">
                                 <option value="intensive">Intensive (4 days)</option>
                                 <option value="regular">Regular (3 weeks)</option>
                             </select>
                         </div>
 
                         <div class="userdetails">
-                            <span class="formDetails" id="peronaliaType">MONTH</span>
-                            <select name="selectType" id="personalia">
+                            <span class="personaliaType">MONTH</span>
+                            <select name="selectType" class="personalia">
                                 <option value="september"> September </option>
                                 <option value="oktober"> October </option>
                                 <option value="november"> November </option>
@@ -79,7 +79,7 @@
 
             <div class="courseType">
 
-                <div id="courseDescription">
+                <div class="courseDescription">
                     <h3>REGULAR COURSE 3 WEEKS</h3>
                     <p> En tekst om hvem det passer for og tidspunktene. </p>
                 </div>
@@ -96,7 +96,7 @@
 
             <div class="courseType">
 
-                <div id="courseDescription">
+                <div class="courseDescription">
                     <h3>INTENSIVE COURSE 4 DAYS</h3>
                     <p> En tekst om hvem det passer for og tidspunktene.</p>
                 </div>
@@ -117,4 +117,4 @@
     
     </body>
       
-<html>
+</html>
